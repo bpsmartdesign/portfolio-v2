@@ -1,9 +1,10 @@
 <template>
   <div>
-    About page
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'app'
+}
 </script>

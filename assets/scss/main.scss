@@ -2,6 +2,8 @@ $tColor1: #ccd6f6;
 $tColor2: #8892b0;
 $color: #f26800;
 $colorTa: #f2680045;
+$bg: #0a192f;
+$bg--dark: #091320;
 
 *,
 *:before,
@@ -15,9 +17,12 @@ $colorTa: #f2680045;
 }
 
 .uTxt { color: $color; }
+.uTxtTa { color: $colorTa; }
+.filter--bg { filter: invert(8%) sepia(42%) saturate(2197%) hue-rotate(193deg) brightness(86%) contrast(96%); }
+.filter--pColor { filter: invert(58%) sepia(60%) saturate(5565%) hue-rotate(3deg) brightness(96%) contrast(102%); }
 
 .app-container {
-  background-color: #0a192f;
+  background-color: $bg;
   color: $tColor2;
   font-family: "Montserrat";
   font-size: .85rem;
@@ -30,21 +35,28 @@ $colorTa: #f2680045;
     div { height: 100%; }
 
     .logo {
-      border: solid .1px $color;
-      background-color: #2f333d;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all .33s ease-in-out;
+      display: flex;
+      align-items: center;
+      
+      .logo--container {
+        border: solid .1px $color;
+        background-color: #2f333d;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .33s ease-in-out;
+        z-index: 2;
 
-      svg, img {
-        height: 40px;
-        width: 40px;
+        svg, img {
+          height: 40px;
+          width: 40px;
+        }
+  
+        &:hover {
+          transform: scale(1.1);
+          filter: brightness(150%);
+        }
       }
 
-      &:hover {
-        transform: scale(1.1);
-        background-color: $colorTa;
-      }
     }
 
     .app-nav {
@@ -58,7 +70,7 @@ $colorTa: #f2680045;
           cursor: pointer;
           font-weight: 600;
 
-          &:hover {
+          &:hover, &.active {
             color: $colorTa;
           }
 
@@ -87,18 +99,25 @@ $colorTa: #f2680045;
     align-items: center;
     justify-content: space-between;
 
-    .ass--list {
+    .as--list {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border: solid;
-      height: 200px;
+
+      .asl--uri {
+        display: inline-block;
+
+        &:hover {
+          transform: scale(1.5);
+          color: $color;
+        }
+      }
     }
 
     .as--line {
       height: 10vh;
       width: 1px;
-      background-color: $color;
+      background-color: $colorTa;
     }
   }
 }
