@@ -16,21 +16,48 @@ $bg--dark: #091320;
   box-sizing: border-box;
 }
 
+.bp-btn {
+  border: solid .1px $color;
+  border-radius: .25rem .25rem .5rem .1rem;
+  color: $color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colorTa;
+  }
+}
+.deco {
+  cursor: pointer;
+  background: linear-gradient(currentColor 0 0) 0 100% /var(--d, 0) 1px no-repeat;
+  transition:0.5s;
+  &:hover {
+    color: $color;
+    --d: 100%;
+  }
+}
 .uTxt { color: $color; }
 .uTxtTa { color: $colorTa; }
+.cTitle { color: $tColor1; }
+.big-title {
+  font-family: "Josefin Sans";
+  font-size: clamp(40px, 8vw, 70px);
+  line-height: 1.1;
+}
 .filter--bg { filter: invert(8%) sepia(42%) saturate(2197%) hue-rotate(193deg) brightness(86%) contrast(96%); }
 .filter--pColor { filter: invert(58%) sepia(60%) saturate(5565%) hue-rotate(3deg) brightness(96%) contrast(102%); }
 
 .app-container {
   background-color: $bg;
   color: $tColor2;
-  font-family: "Montserrat";
-  font-size: .85rem;
+  font-family: "Josefin Sans";
+  font-size: clamp(1.2rem, 1vw, 1.5rem);
 
   .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 3;
 
     div { height: 100%; }
 
@@ -68,7 +95,6 @@ $bg--dark: #091320;
           transition: all .3s ease-in-out;
           color: $tColor1;
           cursor: pointer;
-          font-weight: 600;
 
           &:hover, &.active {
             color: $colorTa;
@@ -98,6 +124,7 @@ $bg--dark: #091320;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
 
     .as--list {
       display: flex;

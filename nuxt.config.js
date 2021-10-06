@@ -13,7 +13,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap' },
     ]
   },
 
@@ -57,7 +58,11 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
   i18n: {
-    locales: ['en', 'fr', 'es'],
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr' }, 
+      { code: 'fr', iso: 'fr-FR', file: 'fr.js', dir: 'ltr' }, 
+      { code: 'es', iso: 'es-ES', file: 'es.js', dir: 'ltr' }, 
+    ],
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',

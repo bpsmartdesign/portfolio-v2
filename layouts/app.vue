@@ -2,6 +2,33 @@
   <div class="app-container h-screen w-screen overflow-hidden">
     <Header />
     <Social />
-    <Nuxt />
+    <Mail />
+    <section class="page--container w-screen h-screen">
+      <div class="page--content">
+        <Nuxt />
+      </div>
+    </section>
   </div>
 </template>
+
+<script>
+export default {
+  head () {
+    return this.$nuxtI18nHead()
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  .page--container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    .page--content {
+      width: 60vw;
+    }
+  }
+</style>

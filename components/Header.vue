@@ -1,5 +1,5 @@
 <template>
-  <div class="app-header py-6 px-12">
+  <div class="app-header py-6 px-12 w-screen">
     <div class="logo">
       <div class="logo--container p-1">
         <NuxtLink to="/">
@@ -20,7 +20,7 @@
     <div class="app-nav">
       <ul>
         <li v-for="(link, id) in links" :key="id"  :class="link.active === true && 'active'">
-          <NuxtLink :to="link.uri">
+          <NuxtLink :to="link.uri" class="font-medium">
             <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
             {{link.label}}
           </NuxtLink>
