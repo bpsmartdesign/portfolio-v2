@@ -16,6 +16,9 @@ $bg--dark: #091320;
   box-sizing: border-box;
 }
 
+.page-enter-active, .page-leave-active { transition: opacity .5s; }
+.page-enter, .page-leave-to { opacity: 0; }
+
 .bp-btn {
   border: solid .1px $color;
   border-radius: .25rem .25rem .5rem .1rem;

@@ -8,13 +8,13 @@
       </div>
       <div class="flag--container">
         <input id="menu-open" type="checkbox" href="#" class="menu-open" name="menu-open"/>
-        <label class="menu-open-button" for="menu-open">
+        <label id="menu-open-button" class="menu-open-button" for="menu-open">
           <img src="/locales/usa.svg" alt="" class="filter--bg">
         </label>
         
-        <a v-for="(locale, id) in locales" :key="id" href="#" class="menu-item">
+        <NuxtLink v-for="(locale, id) in locales" :key="id" :to="switchLocalePath(locale.code)" class="menu-item">
           <img :src="`/locales/${locale.flag}`" alt="">
-        </a>
+        </NuxtLink>
       </div>
     </div>
     <div class="app-nav">
@@ -22,10 +22,10 @@
         <li v-for="(link, id) in links" :key="id"  :class="link.active === true && 'active'">
           <NuxtLink :to="link.uri" class="font-medium">
             <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
-            {{link.label}}
+            {{ $t(link.label) }}
           </NuxtLink>
         </li>
-        <li class="l-resume">Resume</li>
+        <li class="l-resume">{{ $t('menu.resume') }}</li>
       </ul>
     </div>
   </div>
@@ -36,18 +36,22 @@ export default {
   data () {
     return {
       links: [
-        { label: 'About', uri: '/about', active: false },
-        { label: 'Skills', uri: '/skills', active: false },
-        { label: 'Works', uri: '/works', active: false },
-        { label: 'Contact', uri: '/contact', active: false },
+        { label: 'menu.about', uri: '/about', active: false },
+        { label: 'menu.skills', uri: '/skills', active: false },
+        { label: 'menu.works', uri: '/works', active: false },
+        { label: 'menu.contact', uri: '/contact', active: false },
       ],
       locales: [
-        { label: 'English', flag: 'usa.svg', active: false },
-        { label: 'Français', flag: 'france.svg', active: false },
-        { label: 'Español', flag: 'spain.svg', active: false },
+        { code: 'en', label: 'English', flag: 'usa.svg', active: false },
+        { code: 'fr', label: 'Français', flag: 'france.svg', active: false },
+        { code: 'es', label: 'Español', flag: 'spain.svg', active: false },
       ]
     }
-  }
+  },
+
+  created() {},
+
+  methods: {}
 }
 </script>
 

@@ -58,15 +58,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
   i18n: {
+    lazy: true,
+    langDir: 'locales/',
     locales: [
-      { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr' }, 
-      { code: 'fr', iso: 'fr-FR', file: 'fr.js', dir: 'ltr' }, 
-      { code: 'es', iso: 'es-ES', file: 'es.js', dir: 'ltr' }, 
+      { name: 'English', code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' }, 
+      { name: 'Français', code: 'fr', iso: 'fr-FR', file: 'fr.json', dir: 'ltr' }, 
+      { name: 'Español', code: 'es', iso: 'es-ES', file: 'es.json', dir: 'ltr' }, 
     ],
     defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-    }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

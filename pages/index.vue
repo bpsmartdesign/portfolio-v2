@@ -12,6 +12,16 @@
 
 <script>
 export default {
-  layout: 'app'
+  layout: 'app',
+  head: {
+    title: 'Bpsmartdesign Portfolio-V2 | Home page',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my website description'
+      }
+    ],
+  }
 }
 </script>
