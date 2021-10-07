@@ -5,5 +5,17 @@
     "works": "Works",
     "contact": "Contact",
     "resume": "Resume"
+  },
+  "home": {
+    "introduction": "Hi, my name is",
+    "description": "I build web & mobile app.",
+    "me": "I'm a",
+    "profession": "software engineer",
+    "text-1": "specializing in designing and building scalable and maintainable solutions for web & mobile (...) for more",
+    "text-2": "tools both for individuals and for small or large businesses with distinct sizes.",
+    "evidence-1": "innovative",
+    "evidence-2": "intuitive",
+    "and": "and",
+    "contact": "Get in touch"
   }
 }

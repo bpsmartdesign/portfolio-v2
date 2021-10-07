@@ -2,14 +2,15 @@
   <div class="app-header py-6 px-12 w-screen">
     <div class="logo">
       <div class="logo--container p-1">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <img src="/logo.png" alt="">
         </NuxtLink>
       </div>
       <div class="flag--container">
         <input id="menu-open" type="checkbox" href="#" class="menu-open" name="menu-open"/>
         <label id="menu-open-button" class="menu-open-button" for="menu-open">
-          <img src="/locales/usa.svg" alt="" class="filter--bg">
+          <img :src="`/locales/${currentLg.flag}`" alt="">
+          <div class="animate__animated animate__delay-slow animate__flipInY close-menu text-sm font-thin"><font-awesome-icon :icon="['fa', 'times']" /></div>
         </label>
         
         <NuxtLink v-for="(locale, id) in locales" :key="id" :to="switchLocalePath(locale.code)" class="menu-item">
@@ -20,7 +21,7 @@
     <div class="app-nav">
       <ul>
         <li v-for="(link, id) in links" :key="id"  :class="link.active === true && 'active'">
-          <NuxtLink :to="link.uri" class="font-medium">
+          <NuxtLink :to="localePath(link.uri)" class="font-medium">
             <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
             {{ $t(link.label) }}
           </NuxtLink>
@@ -41,17 +42,39 @@ export default {
         { label: 'menu.works', uri: '/works', active: false },
         { label: 'menu.contact', uri: '/contact', active: false },
       ],
-      locales: [
+      allLocales: [
         { code: 'en', label: 'English', flag: 'usa.svg', active: false },
         { code: 'fr', label: 'Français', flag: 'france.svg', active: false },
         { code: 'es', label: 'Español', flag: 'spain.svg', active: false },
-      ]
+        { code: 'ru', label: 'русский', flag: 'ru.svg', active: false },
+      ],
+      locales: undefined,
+      currentLg: undefined,
     }
   },
 
-  created() {},
+  watch: {
+    $route() {
+      const checkbox = document.getElementById('menu-open')
+      if(checkbox.checked){
+        checkbox.click()
+        this.setCurrentLg()
+      }
+    },
+  },
 
-  methods: {}
+  created() {
+    this.setCurrentLg()
+  },
+
+  methods: {
+    setCurrentLg() {
+      const currentCode = this.$i18n.loadedLanguages.pop()
+      const locale = this.allLocales.filter(loc => loc.code === currentCode)
+      this.currentLg = Array.isArray(locale) ? locale.pop() : locale
+      this.locales = this.allLocales.filter(loc => loc.code !== this.currentLg.code)
+    }
+  },
 }
 </script>
 
@@ -75,26 +98,18 @@ export default {
   $opening-angle:$pi;
   
   a{ color:inherit; }
-  
-  %goo{
-    filter:url('#goo');
-    // debug 
-    // background:rgba(255,0,0,0.2);
-  }
 
   %ball{
-    background:$bg--dark;
-    border-radius:100%;
-    width:30px;
-    height:30px;
-    margin-left:-15px;
+    border-radius:50% !important;
+    width:25px;
+    height:25px;
+    margin-left:-12.5px;
     position:absolute;
     right: 3px;
     text-align:center;
-    line-height:30px;
+    line-height:25px;
     transform:translate3d(0,0,0);
     transition:transform ease-out 200ms;
-    overflow: hidden;
   }
 
   .flag--container {
@@ -122,7 +137,21 @@ export default {
         height: 100%;
         border-radius: 50%;
         float: right;
+        border: solid 2px #ffffff;
         cursor: pointer;
+      }
+
+      .close-menu {
+        position: absolute;
+        width: 22px; height: 22px;
+        margin-left: 2px;
+        margin-top: 2px;
+        border-radius: 50%;
+        background-color: $color;
+        text-align: center;
+        padding: 3px;
+        color: #fff;
+        display: none;
       }
 
       &:hover {
@@ -132,7 +161,15 @@ export default {
 
     .menu-item{
       @extend %ball;
+      z-index: 0 !important;
       transform:scale(.75);
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        border: solid 2px #ffffff;
+      }
+
       &:hover{
         filter: grayscale(1);
       }
@@ -144,11 +181,18 @@ export default {
     }
   }
 
-
   .menu-open:checked+.menu-open-button{
     transition-timing-function:linear;
     transition-duration:200ms;
     transform:scale(0.8,0.8) translate3d(0,0,0);
+    
+    img {
+      display: none;
+    }
+
+    .close-menu {
+      display: block;
+    }
   }
 
   .menu-open:checked~.menu-item{

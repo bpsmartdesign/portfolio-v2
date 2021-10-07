@@ -26,6 +26,7 @@ export default {
     align-items: center;
     justify-content: center;
     z-index: 1;
+    max-width: 100vw;
 
     .page--content {
       width: 60vw;

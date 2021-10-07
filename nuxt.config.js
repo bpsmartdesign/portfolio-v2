@@ -20,7 +20,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/scss/main.scss'
+    '~/assets/css/animate.css',
+    '~/assets/scss/main.scss',
   ],
   
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -63,9 +64,15 @@ export default {
     locales: [
       { name: 'English', code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' }, 
       { name: 'Français', code: 'fr', iso: 'fr-FR', file: 'fr.json', dir: 'ltr' }, 
-      { name: 'Español', code: 'es', iso: 'es-ES', file: 'es.json', dir: 'ltr' }, 
+      { name: 'Español', code: 'es', iso: 'es-ES', file: 'es.json', dir: 'ltr' },
+      { name: 'русский', code: 'ru', iso: 'ru-RU', file: 'ru.json', dir: 'ltr' },
     ],
     defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
