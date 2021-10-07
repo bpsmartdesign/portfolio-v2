@@ -5,5 +5,17 @@
     "works": "Travaux",
     "contact": "Contact",
     "resume": "Mon CV"
+  },
+  "home": {
+    "introduction": "Salut, je m'appelle",
+    "description": "Développeur web & mobile.",
+    "me": "Je suis",
+    "profession": "développeur fullstack",
+    "text-1": "spécialisée dans la conception et la réalisation de solutions évolutives et maintenables pour le web et le mobile (...) plus particulièrement des outils",
+    "text-2": "aussi bien pour les particuliers que pour les petites ou grandes entreprises.",
+    "evidence-1": "innovants",
+    "evidence-2": "intuitifs",
+    "and": "et",
+    "contact": "Me contacter"
   }
 }

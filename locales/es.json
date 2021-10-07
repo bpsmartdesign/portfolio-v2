@@ -1,3 +1,21 @@
 {
-  
+  "menu": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "works": "Obras",
+    "contact": "Contactar",
+    "resume": "Reanudar"
+  },
+  "home": {
+    "introduction": "Hola, mi nombre es",
+    "description": "Construyo una aplicación web y móvil.",
+    "me": "Yo soy",
+    "profession": "Ingeniero de software",
+    "text-1": "especializada en el diseño y producción de soluciones escalables y fáciles de mantener para la web y dispositivos móviles (...) más particularmente herramientas",
+    "text-2": "tanto para particulares como para pequeñas o grandes empresas.",
+    "evidence-1": "innovador",
+    "evidence-2": "intuitivo",
+    "and": "y",
+    "contact": "Ponerse en contacto"
+  }
 }
