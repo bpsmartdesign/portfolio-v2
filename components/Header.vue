@@ -54,12 +54,14 @@ export default {
   },
 
   watch: {
-    $route() {
+    $route(from, to) {
       const checkbox = document.getElementById('menu-open')
       if(checkbox.checked){
         checkbox.click()
         this.setCurrentLg()
       }
+
+      (from.name.slice(-4) !== to.name.slice(-4)) && this.setCurrentLg()
     },
   },
 
