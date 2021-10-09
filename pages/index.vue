@@ -1,7 +1,7 @@
 <template>
   <div>
     <h5 class="uTxt leading-10 ml-1">{{ $t('home.introduction') }}</h5>
-    <h3 class="big-title leading-10 my-2 font-black">Biya Paul.</h3>
+    <h3 class="big-title leading-10 my-2 font-black wTxt">Biya Paul.</h3>
     <h3 class="big-title leading-10 font-black">{{ $t('home.description') }}</h3>
     <p class="ml-1 w-2/3 mt-4 mb-10 leading-relaxed">
       {{ $t('home.me') }}
