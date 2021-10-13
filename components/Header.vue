@@ -26,8 +26,11 @@
             <span class="deco">{{ $t(link.label) }}</span>
           </NuxtLink>
         </li>
-        <li class="bp-btn px-3 py-2 uTxt">{{ $t('menu.resume') }}</li>
+        <li class="bp-btn px-3 py-2 uTxt" @click="showCv">{{ $t('menu.resume') }}</li>
       </ul>
+    </div>
+    <div id="cv" class="cv--container" @click.self="closeCv">
+      <embed id="embed" src="/cv_en.pdf" class="cv--content animate__animated animate__flipInY" type="application/pdf" width="624" height="877">
     </div>
   </div>
 </template>
@@ -75,6 +78,25 @@ export default {
       const locale = this.allLocales.filter(loc => loc.code === currentCode)
       this.currentLg = Array.isArray(locale) ? locale.pop() : locale
       this.locales = this.allLocales.filter(loc => loc.code !== this.currentLg.code)
+    },
+
+    closeCv() {
+      const cv = document.getElementById('cv')
+      const embed = document.getElementById('embed')
+
+      embed.classList.remove('animate__flipInY')
+      embed.classList.add('animate__flipOutY')
+
+      setTimeout(() => {
+        cv.style.display = 'none'
+        embed.classList.remove('animate__flipOutY')
+        embed.classList.add('animate__flipInY')
+      }, 750)
+    },
+
+    showCv() {
+      const cv = document.getElementById('cv')
+      cv.style.display = 'block'
     }
   },
 }
@@ -85,7 +107,6 @@ export default {
 
   //vars
   $fg:#e91e63;
-  $bg:#8bc34a;
   $tColor1: #ccd6f6;
   $tColor2: #8892b0;
   $color: #f26800;
@@ -209,6 +230,27 @@ export default {
     }
   }
 
+  .cv--container {
+    position: absolute;
+    width: 100vw !important; height: 100vh !important;
+    top: 0; left: 0;
+    background-color: rgba($color: $bg--dark, $alpha: .8);
+    display: none;
+    overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      display: none;
+    }
+
+    .cv--content {
+      border-radius: .6rem;
+      border: solid .1px $color;
+      background-color: $bg--dark;
+      margin-left: calc(50vw - 312px);
+      margin-top: calc(50vh - 438.5px);
+    }
+  }
 </style>
 
