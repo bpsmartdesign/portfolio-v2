@@ -1,6 +1,6 @@
 <template>
   <div class="about--container">
-    <div class="about-text mr-20">
+    <div class="about--text mr-20">
       <MainTitle title="Who is this guy ?" num="0.1" />
       <p>
         Hello!, My name is <span class="uTxtTa deco">BIYA Paul,</span> am a software Engineer and occasionally a designer. My passion for the web dates from my first year of university in 2012 when I discovered javascript.
@@ -59,7 +59,7 @@ export default {
     display: flex;
     align-items: center;
 
-    .about-text {
+    .about--text {
       p { margin: 25px 0; }
 
       .list--tech {
@@ -76,6 +76,7 @@ export default {
 
     .about--detail {
       position: relative;
+      width: 50%;
 
       img {
         display: block;

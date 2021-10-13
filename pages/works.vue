@@ -3,7 +3,7 @@
     <div class="">
       <MainTitle title="Some things I've build" num="0.3" />
       <div class="wc--container">
-        <div v-for="work in works" :key="work.id" class="wc--item">
+        <div v-for="work in works" :key="work.id" class="wc--item animate__animated animate__fadeIn">
           <div class="wi--img">
             <img :src="work.img" :alt="work.name">
           </div>
@@ -133,6 +133,7 @@ export default {
     align-items: center;
 
     .wc--container {
+      height: 60vh;
       max-height: 60vh;
       overflow-y: scroll;
       display: flex;
