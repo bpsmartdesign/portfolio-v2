@@ -2,6 +2,7 @@ $tColor1: #ccd6f6;
 $tColor2: #8892b0;
 $color: #f26800;
 $colorTa: #f2680045;
+$colorTa2: #f2680066;
 $bg: #0a192f;
 $bg--dark: #091320;
 
@@ -20,6 +21,14 @@ html, body {
   max-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+}
+
+.list {
+  display: flex;
+
+  li {
+    margin-right: .5rem;
+  }
 }
 
 .page-enter-active { animation: acrossIn .4s ease-out both; } 
@@ -47,7 +56,7 @@ html, body {
 
 .bp-btn {
   border: solid .1px $color;
-  border-radius: .25rem .25rem .5rem .1rem;
+  border-radius: .25rem;
   color: $color;
   cursor: pointer;
 
@@ -64,10 +73,11 @@ html, body {
     --d: 100%;
   }
 }
-.uTxt { color: $color; }
-.wTxt { color: $tColor1; }
-.uTxtTa { color: $colorTa; }
-.cTitle { color: $tColor1; }
+.uTxt { color: $color !important; }
+.wTxt { color: $tColor1 !important; }
+.uTxtTa { color: $colorTa !important; }
+.uTxtTa2 { color: $colorTa2 !important; }
+.cTitle { color: $tColor1 !important; }
 .big-title {
   font-family: "Josefin Sans";
   font-size: clamp(40px, 8vw, 70px);
@@ -129,19 +139,6 @@ html, body {
           &:hover, &.active {
             color: $colorTa;
           }
-
-          &.l-resume {
-            border: solid .1px $color;
-            border-radius: .25rem .25rem .5rem .1rem;
-            padding: .6rem;
-            color: $color;
-            cursor: pointer;
-
-            &:hover {
-              background-color: $colorTa;
-            }
-          }
-
         }
       }
     }

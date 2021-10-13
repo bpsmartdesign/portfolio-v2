@@ -23,10 +23,10 @@
         <li v-for="(link, id) in links" :key="id"  :class="link.active === true && 'active'">
           <NuxtLink :to="localePath(link.uri)" class="font-medium">
             <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
-            {{ $t(link.label) }}
+            <span class="deco">{{ $t(link.label) }}</span>
           </NuxtLink>
         </li>
-        <li class="l-resume">{{ $t('menu.resume') }}</li>
+        <li class="bp-btn px-3 py-2 uTxt">{{ $t('menu.resume') }}</li>
       </ul>
     </div>
   </div>

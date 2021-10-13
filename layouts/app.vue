@@ -30,6 +30,7 @@ export default {
 
     .page--content {
       width: 60vw;
+      // border: solid;
     }
   }
 </style>

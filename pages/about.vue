@@ -1,11 +1,41 @@
 <template>
-  <div>
+  <div class="about--container">
+    <div class="about-text mr-20">
+      <MainTitle title="Who is this guy ?" num="0.1" />
+      <p>
+        Hello!, My name is <span class="uTxtTa deco">BIYA Paul,</span> am a software Engineer and occasionally a designer. My passion for the web dates from my first year of university in 2012 when I discovered javascript.
+      </p>
+      <p>
+        Since then, I have not hesitated to discover, design and build ultra modern and scalable platforms and applications through the multiple technologies that make up my profile.
+      </p>
+      <p>
+        Among which the main ones are :
+      </p>
+      <ul class="list--tech list-inside">
+        <li v-for="tech in mainTechno" :key="tech.id"><a class="deco uTxtTa ml-4" :href="tech.uri" target="blank">{{tech.name}}</a></li>
+      </ul>
+    </div>
+    <div class="about--detail">
+      <img src="/me.jpg" alt="" class="shadow-2xl">
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   layout: 'app',
+  data () {
+    return {
+      mainTechno: [
+        {name: 'Javascript (Es6 +)', uri: 'https://www.javascript.com/'},
+        {name: 'Vue Js', uri: 'https://vuejs.org/'},
+        {name: 'React', uri: 'https://reactjs.org/'},
+        {name:  'TypeScript', uri: 'https://www.typescriptlang.org/'},
+        {name: 'Laravel', uri: 'https://laravel.com/'},
+        {name: 'Node Js', uri: 'https://nodejs.org/'},
+      ]
+    }
+  },
   head() {
     return {
       title: `Bpsmartdesign Portfolio-V2 | ${this.$t('menu.about')}`,
@@ -17,6 +47,72 @@ export default {
         }
       ],
     }
-  }
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+  $tColor1: #ccd6f6;
+  $color: #f26800;
+  $colorTa: #f2680045;
+  .about--container {
+    display: flex;
+    align-items: center;
+
+    .about-text {
+      p { margin: 25px 0; }
+
+      .list--tech {
+        list-style-type: "→" !important;
+        color: $color;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 49%;
+        }
+      }
+    }
+
+    .about--detail {
+      position: relative;
+
+      img {
+        display: block;
+        width: 80%;
+        margin: 5% auto;
+        border-radius: .2rem .8rem;
+        cursor: pointer;
+        border: solid .1px $color;
+        z-index: 2;
+        filter: grayscale(.4);
+
+        &:hover {
+          filter: grayscale(0);
+          transform: scale(1.02) rotate(-1deg);
+        }
+
+      }
+
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 80%; height: 90%;
+        border-radius: .8rem .2rem;
+        border: solid .1px $color;
+        background-color: $colorTa;
+      }
+
+      &::after {
+        top: 0;
+        left: 5%;
+      }
+
+      &::before {
+        bottom: 0;
+        right: 5%;
+      }
+    }
+  }
+</style>
