@@ -73,11 +73,11 @@ html, body {
     --d: 100%;
   }
 }
-.uTxt { color: $color !important; }
-.wTxt { color: $tColor1 !important; }
-.uTxtTa { color: $colorTa !important; }
-.uTxtTa2 { color: $colorTa2 !important; }
-.cTitle { color: $tColor1 !important; }
+.uTxt { color: $color; }
+.wTxt { color: $tColor1; }
+.uTxtTa { color: $colorTa; }
+.uTxtTa2 { color: $colorTa2; }
+.cTitle { color: $tColor1; }
 .big-title {
   font-family: "Josefin Sans";
   font-size: clamp(40px, 8vw, 70px);
@@ -136,8 +136,8 @@ html, body {
           color: $tColor1;
           cursor: pointer;
 
-          &:hover, &.active {
-            color: $colorTa;
+          &:last-child {
+            color: $color !important;
           }
         }
       }
