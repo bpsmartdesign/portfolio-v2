@@ -1,15 +1,15 @@
 <template>
-  <div class="work--container">
-    <div class="">
+  <div class="work--container overflow-hidden py-6 flex-col items-center justify-center flex-wrap content-center">
+    <div class="w-full">
       <MainTitle title="Some things I've build" num="0.3" />
-      <div class="wc--container">
+      <div class="wc--container flex items-center justify-center flex-wrap">
         <div v-for="work in works" :key="work.id" class="wc--item animate__animated animate__fadeIn">
           <div class="wi--img">
             <img :src="work.img" :alt="work.name">
           </div>
           <div class="wi--content">
             <div class="wic--elt">
-              <h3 class="wic--title text-3xl text-white font-black">{{ work.name }}</h3>
+              <h3 class="wic--title text-3xl text-white font-black text-center">{{ work.name }}</h3>
               <div class="short--divider my-3"></div>
               <p class="short--descritpion uTxt italic text-base">{{ work.shortDescription }}</p>
               <ul class="text-xs font-thin uTxtTa2 list">
@@ -19,7 +19,7 @@
           </div>
           <div class="wi--details animate__animated animate__delay-slow animate__flipInY">
             <div class="wid--container p-3 font-thin text-base">
-              <p class="text-center">{{ work.description}}</p>
+              <p class="text-center overflow-hidden">{{ work.description}}</p>
               <div class="divider my-5"></div>
               <ul class="text-xs font-bold uTxtTa">
                 <li v-for="tag in work.tags" :key="tag.id" class="deco">{{tag}}</li>
@@ -133,12 +133,6 @@ export default {
     align-items: center;
 
     .wc--container {
-      height: 60vh;
-      max-height: 60vh;
-      overflow-y: scroll;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
       &::-webkit-scrollbar {
         -ms-overflow-style: none;  /* IE and Edge */
@@ -147,7 +141,6 @@ export default {
       }
 
       .wc--item {
-        width: 48%;
         margin-bottom: 3vh;
         overflow: hidden;
         border-radius: .4rem;
@@ -269,6 +262,18 @@ export default {
             display: block;
           }
         }
+      }
+    }
+  }
+
+  @media (min-width: '1280px') {
+    .wc--container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .wc--item {
+        width: calc(50% - 10px) !important;
       }
     }
   }

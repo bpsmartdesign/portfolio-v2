@@ -1,5 +1,5 @@
 <template>
-  <div class="app-social mx-12">
+  <div class="app-social fixed hidden sm:flex flex-col items-center justify-between mx-12">
     <div class="as--list">
       <ul>
         <li v-for="social in socials" :key="social.id" class="my-3 uTxtTa">
@@ -28,4 +28,35 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  $color: #f26800;
+  $colorTa: #f2680045;
+
+  .app-social {
+    z-index: 1;
+    left: 0; bottom: 0;
+
+    .as--list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .asl--uri {
+        display: inline-block;
+
+        &:hover {
+          transform: scale(1.5);
+          color: $color;
+        }
+      }
+    }
+
+    .as--line {
+      height: 10vh;
+      width: 1px;
+      background-color: $colorTa;
+    }
+  }
+</style>
 

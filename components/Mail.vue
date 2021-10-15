@@ -1,5 +1,5 @@
 <template>
-  <div class="app-mail mx-12">
+  <div class="app-mail fixed hidden sm:flex flex-col items-center justify-between mx-12">
     <p class="mail-content uTxt text-base"><a :href="`mailto:${mail}?subject= Contact from : Portfolio V2`">{{ mail }}</a></p>
     <div class="mail--line mt-4"></div>
   </div>
@@ -21,12 +21,7 @@ export default {
   $colorTa: #f2680045;
 
   .app-mail {
-    position: fixed;
     right: 0; bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     z-index: 2;
 
     .mail-content {

@@ -1,6 +1,6 @@
 <template>
-  <div class="skill--container">
-    <div class="work--timeline mr-20">
+  <div class="skill--container flex items-center justify-center flex-wrap content-center py-6 lg:flex lg:flex-nowrap">
+    <div class="work--timeline lg:mr-10 w-full lg:w-3/4">
       <MainTitle title="Work history & Skills" num="0.2" />
       <div class="wt--container">
         <div v-for="exp in experiences" :key="exp.id" class="wt--item">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="skill--list">
+    <div class="skill--list w-full lg:w-1/4">
       <div v-for="skill in skills" :key="skill.id" class="sl--item font-thin text-sm">
         <a :href="skill.uri" target="blank" class="">{{ skill.elt}}</a>
         <div class="sl--value" :style="{ width: skill.value}"></div>
@@ -54,7 +54,7 @@ export default {
           enterprise: 'Mayem solutions',
           logo: '/enterprises_logo/mayem_solutions.png',
           uri: 'https://mayem-solutions.com/',
-          tags: ['VueJs', 'Laravel', 'PostgreSQL', 'Element UI', 'Trello', 'Gitlab', 'Flutter'],
+          tags: ['VueJs', 'Laravel', 'Postgre', 'Element_UI', 'Trello', 'Gitlab', 'Flutter'],
           role: 'Fullstack Web & Mobile developper',
           color: '#fdb91f',
           colorTa: '#fdb91f80',
@@ -98,7 +98,7 @@ export default {
           enterprise: 'Freelance',
           logo: '/enterprises_logo/freelance.jpg',
           uri: '#',
-          tags: ['React', 'Typescript', 'Vue Js', 'Laravel', 'Node Js', 'Flutter', 'Wordpress', '...'],
+          tags: ['React', 'Typescript', 'Vue', 'Laravel', 'Node', 'Flutter', 'Wordpress', '...'],
           role: 'Freelancer',
           color: '#404042',
           colorTa: '#40404280',
@@ -141,13 +141,9 @@ export default {
   $color: #f26800;
   $bg--dark: #091320;
   $colorTa: #f2680045;
-  .skill--container {
-    display: flex;
-    align-items: center;
-    
-    .work--timeline {
-      width: 70%;
 
+  .skill--container {    
+    .work--timeline {
       .wt--container {
         max-height: 60vh;
         overflow-y: scroll;
@@ -175,7 +171,8 @@ export default {
             align-items: center;
             justify-content: space-between;
             overflow: hidden;
-            height: 180px;
+            position: relative;
+            // height: 200px;
             
             .wtid--content {
               padding: 1rem;
@@ -198,6 +195,8 @@ export default {
               width: 20%;
               height: 100%;
               color: #fff;
+              position: absolute;
+              top: 0; right: 0;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -237,7 +236,7 @@ export default {
               content: "";
               position: absolute;
               width: 1px;
-              height: calc(4vh + 100px);
+              height: calc(4vh + 150px);
               background-color: #fff;
               z-index: -1;
               top: 50%;
@@ -249,6 +248,10 @@ export default {
 
             .wti--desc {
               flex-direction: row-reverse;
+
+              .wtid--aside {
+                left: 0;
+              }
             }
 
             .wti--icon {
@@ -276,8 +279,6 @@ export default {
     }
 
     .skill--list {
-      width: 30%;
-
       .sl--item {
         position: relative;
         width: 100%;

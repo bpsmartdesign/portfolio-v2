@@ -4,7 +4,7 @@
       <span class="text-base uTxt font-thin">04.</span> 
       What's next ?
     </h4>
-    <h3 class="font-black text-6xl cTitle">Get in touch</h3>
+    <h3 class="font-black text-4xl md:text-6xl cTitle text-center">Get in touch</h3>
     <p class="my-8 leading-relaxed text-center font-thin">
       I’m interested in freelance and remote opportunities – especially ambitious or large projects. However, if you have other request, question or just want to say hi, I’ll try my best to get back to you!
     </p>

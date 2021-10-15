@@ -1,9 +1,9 @@
 <template>
-  <div class="app-header py-6 px-12 w-screen">
+  <div class="app-header flex justify-between items-center fixed py-6 px-6 lg:px-12 w-screen">
     <div class="logo">
       <div class="logo--container p-1">
         <NuxtLink :to="localePath('/')">
-          <img src="/logo.png" alt="">
+          <img src="/logo.png" alt="" class="w-10">
         </NuxtLink>
       </div>
       <div class="flag--container">
@@ -19,8 +19,8 @@
       </div>
     </div>
     <div class="app-nav">
-      <ul>
-        <li v-for="(link, id) in links" :key="id"  :class="link.active === true && 'active'">
+      <ul class="hidden lg:flex items-center">
+        <li v-for="(link, id) in links" :key="id" class="mr-6"  :class="link.active === true && 'active'">
           <NuxtLink :to="localePath(link.uri)" class="font-medium">
             <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
             <span class="deco">{{ $t(link.label) }}</span>
@@ -28,6 +28,19 @@
         </li>
         <li class="bp-btn px-3 py-2 uTxt" @click="showCv">{{ $t('menu.resume') }}</li>
       </ul>
+      <div class="block lg:hidden mobile-menu--container">
+        <span class="font-thin uTxt" @click="mobileMenu = true"><font-awesome-icon :icon="['fa', 'bars']" /></span>
+        <ul v-if="mobileMenu" id="mobile-menu" class="mobile--menu fixed inset-0 flex flex-col items-center justify-center animate__animated animate__fadeInRight">
+          <span class="font-thin uTxt close--menu fixed text-4xl" @click="closeMobileMenu"><font-awesome-icon :icon="['fa', 'times']" /></span>
+          <li v-for="(link, id) in links" :key="id" class="my-4 text-4xl"  :class="link.active === true && 'active'">
+            <NuxtLink :to="localePath(link.uri)" class="font-medium">
+              <span class="uTxt font-bold text-xs">{{ `0${id + 1}.` }}</span>
+              <span class="deco">{{ $t(link.label) }}</span>
+            </NuxtLink>
+          </li>
+          <li class="bp-btn px-3 py-2 uTxt mt-10" @click="showCv">{{ $t('menu.resume') }}</li>
+        </ul>
+      </div>
     </div>
     <div id="cv" class="cv--container" @click.self="closeCv">
       <embed id="embed" src="/cv_en.pdf" class="cv--content animate__animated animate__flipInY" type="application/pdf" width="624" height="877">
@@ -53,11 +66,14 @@ export default {
       ],
       locales: undefined,
       currentLg: undefined,
+      mobileMenu: false,
     }
   },
 
   watch: {
     $route(from, to) {
+      this.mobileMenu && this.closeMobileMenu()
+
       const checkbox = document.getElementById('menu-open')
       if(checkbox.checked){
         checkbox.click()
@@ -97,6 +113,18 @@ export default {
     showCv() {
       const cv = document.getElementById('cv')
       cv.style.display = 'block'
+    },
+
+    closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu')
+      mobileMenu.classList.remove('animate__fadeInRight')
+      mobileMenu.classList.add('animate__fadeOutRight')
+
+      setTimeout(() => {
+        mobileMenu.classList.remove('animate__fadeOutRight')
+        mobileMenu.classList.add('animate__fadeInRight')
+        this.mobileMenu = false
+      }, 750)
     }
   },
 }
@@ -121,6 +149,60 @@ export default {
   $opening-angle:$pi;
   
   a{ color:inherit; }
+  
+  .app-header {
+    z-index: 3;
+
+    div { height: 100%; }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      
+      .logo--container {
+        border: solid .1px $color;
+        background-color: $bg--dark;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .33s ease-in-out;
+        z-index: 2;
+  
+        &:hover {
+          transform: scale(1.1);
+          filter: brightness(150%);
+        }
+      }
+
+    }
+
+    .app-nav {
+      ul {
+        list-style-type: none;
+        li {
+          transition: all .3s ease-in-out;
+          color: $tColor1;
+          cursor: pointer;
+
+          &:last-child {
+            color: $color !important;
+          }
+        }
+      }
+
+      .mobile-menu--container {
+
+        ul {
+          background-color: $bg;
+          z-index: 4;
+
+          .close--menu {
+            right: 10%;
+            top: 8%;
+          }
+        }
+      }
+    }
+  }
 
   %ball{
     border-radius:50% !important;
@@ -237,6 +319,7 @@ export default {
     background-color: rgba($color: $bg--dark, $alpha: .8);
     display: none;
     overflow-y: scroll;
+    z-index: 6;
 
     &::-webkit-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */

@@ -84,5 +84,38 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    postcss: {
+      plugins: {
+      "postcss-import": {},
+      "postcss-url": {},
+      // to edit target browsers: use "browserslist" field in package.json
+      "autoprefixer": {}
+      }
+    },
+    '@nuxtjs/tailwindcss' : {
+      theme: {
+        screens: {
+          'sm': '640px',
+          // => @media (min-width: 640px) { ... }
+    
+          'md': '768px',
+          // => @media (min-width: 768px) { ... }
+    
+          'lg': '1024px',
+          // => @media (min-width: 1024px) { ... }
+    
+          'xl': '1280px',
+          // => @media (min-width: 1280px) { ... }
+    
+          '2xl': '1536px',
+          // => @media (min-width: 1536px) { ... }
+        },
+        extend: {
+          width: {
+            'lg': '60vh',
+          },
+        }
+      }
+    }
   }
 }

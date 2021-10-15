@@ -80,7 +80,6 @@ html, body {
 .cTitle { color: $tColor1; }
 .big-title {
   font-family: "Josefin Sans";
-  font-size: clamp(40px, 8vw, 70px);
   line-height: 1.1;
 }
 .filter--bg { filter: invert(8%) sepia(42%) saturate(2197%) hue-rotate(193deg) brightness(86%) contrast(96%); }
@@ -90,88 +89,4 @@ html, body {
   background-color: $bg;
   color: $tColor2;
   font-family: "Josefin Sans";
-  font-size: clamp(1.2rem, 1vw, 1.5rem);
-
-  .app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 3;
-
-    div { height: 100%; }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      
-      .logo--container {
-        border: solid .1px $color;
-        background-color: #2f333d;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all .33s ease-in-out;
-        z-index: 2;
-
-        svg, img {
-          height: 40px;
-          width: 40px;
-        }
-  
-        &:hover {
-          transform: scale(1.1);
-          filter: brightness(150%);
-        }
-      }
-
-    }
-
-    .app-nav {
-      ul {
-        list-style-type: none;
-        li {
-          display: inline-block;
-          margin-left: 2rem;
-          transition: all .3s ease-in-out;
-          color: $tColor1;
-          cursor: pointer;
-
-          &:last-child {
-            color: $color !important;
-          }
-        }
-      }
-    }
-  }
-
-  .app-social {
-    position: fixed;
-    left: 0; bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-
-    .as--list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .asl--uri {
-        display: inline-block;
-
-        &:hover {
-          transform: scale(1.5);
-          color: $color;
-        }
-      }
-    }
-
-    .as--line {
-      height: 10vh;
-      width: 1px;
-      background-color: $colorTa;
-    }
-  }
 }

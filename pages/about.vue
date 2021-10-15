@@ -1,6 +1,6 @@
 <template>
-  <div class="about--container">
-    <div class="about--text mr-20">
+  <div class="about--container flex items-center justify-center flex-wrap content-center py-6 lg:flex lg:flex-nowrap">
+    <div class="about--text w-full lg:mr-10 lg:w-3/4">
       <MainTitle title="Who is this guy ?" num="0.1" />
       <p>
         Hello!, My name is <span class="uTxtTa deco">BIYA Paul,</span> am a software Engineer and occasionally a designer. My passion for the web dates from my first year of university in 2012 when I discovered javascript.
@@ -15,8 +15,10 @@
         <li v-for="tech in mainTechno" :key="tech.id"><a class="deco uTxtTa ml-4" :href="tech.uri" target="blank">{{tech.name}}</a></li>
       </ul>
     </div>
-    <div class="about--detail">
-      <img src="/me.jpg" alt="" class="shadow-2xl">
+    <div class="mt-12 w-full flex flex-nowrap items-center lg:w-1/3">
+      <div class="about--detail w-2/3 lg:w-full max-w-xs ">
+        <img src="/me.jpg" alt="" class="shadow-2xl">
+      </div>
     </div>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
         {name:  'TypeScript', uri: 'https://www.typescriptlang.org/'},
         {name: 'Laravel', uri: 'https://laravel.com/'},
         {name: 'Node Js', uri: 'https://nodejs.org/'},
-      ]
+      ],
     }
   },
   head() {
@@ -56,9 +58,6 @@ export default {
   $color: #f26800;
   $colorTa: #f2680045;
   .about--container {
-    display: flex;
-    align-items: center;
-
     .about--text {
       p { margin: 25px 0; }
 
@@ -76,7 +75,6 @@ export default {
 
     .about--detail {
       position: relative;
-      width: 50%;
 
       img {
         display: block;
