@@ -53,7 +53,7 @@ export default {
 
     .divider {
       width: 7%;
-      height: .1px;
+      height: 1px;
       background-color: $color;
     }
   }

@@ -12,12 +12,12 @@
         Among which the main ones are :
       </p>
       <ul class="list--tech list-inside">
-        <li v-for="tech in mainTechno" :key="tech.id"><a class="deco uTxtTa ml-4" :href="tech.uri" target="blank">{{tech.name}}</a></li>
+        <li v-for="tech in mainTechno" :key="tech.id"><a class="ml-4" :href="tech.uri" target="blank"><span class="deco uTxtTa">{{tech.name}}</span></a></li>
       </ul>
     </div>
     <div class="mt-12 w-full flex flex-nowrap items-center lg:w-1/3">
       <div class="about--detail w-2/3 lg:w-full max-w-xs ">
-        <img src="/me.jpg" alt="" class="shadow-2xl">
+        <img src="/me.webp" alt="bpsmartdesign" min-width="250px" min-height="250px" class="shadow-2xl">
       </div>
     </div>
   </div>
@@ -69,6 +69,15 @@ export default {
 
         li {
           width: 49%;
+
+          a {
+            display: inline-block;
+            width: calc(100% - 50px);
+          }
+
+          &::marker {
+            display: inline-block;
+          }
         }
       }
     }
@@ -82,7 +91,7 @@ export default {
         margin: 5% auto;
         border-radius: .2rem .8rem;
         cursor: pointer;
-        border: solid .1px $color;
+        border: solid 1px $color;
         z-index: 2;
         filter: grayscale(.4);
 
@@ -99,7 +108,7 @@ export default {
         z-index: -1;
         width: 80%; height: 90%;
         border-radius: .8rem .2rem;
-        border: solid .1px $color;
+        border: solid 1px $color;
         background-color: $colorTa;
       }
 

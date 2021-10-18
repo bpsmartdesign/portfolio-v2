@@ -3,18 +3,18 @@
     <div class="logo">
       <div class="logo--container p-1">
         <NuxtLink :to="localePath('/')">
-          <img src="/logo.png" alt="" class="w-10">
+          <img src="/logo.webp" alt="LOGO" width="40px" height="40px">
         </NuxtLink>
       </div>
       <div class="flag--container">
         <input id="menu-open" type="checkbox" href="#" class="menu-open" name="menu-open"/>
         <label id="menu-open-button" class="menu-open-button" for="menu-open">
-          <img :src="`/locales/${currentLg.flag}`" alt="">
+          <img :src="`/locales/${currentLg.flag}`" :alt="currentLg.label" width="30px" height="30px">
           <div class="animate__animated animate__delay-slow animate__flipInY close-menu text-sm font-thin"><font-awesome-icon :icon="['fa', 'times']" /></div>
         </label>
         
-        <NuxtLink v-for="(locale, id) in locales" :key="id" :to="switchLocalePath(locale.code)" class="menu-item">
-          <img :src="`/locales/${locale.flag}`" alt="">
+        <NuxtLink v-for="(locale, id) in locales" :key="id" :to="switchLocalePath(locale.code)" :aria-label="locale.label" class="menu-item">
+          <img :src="`/locales/${locale.flag}`" :alt="locale.label" width="30px" height="30px">
         </NuxtLink>
       </div>
     </div>
@@ -160,7 +160,7 @@ export default {
       align-items: center;
       
       .logo--container {
-        border: solid .1px $color;
+        border: solid 1px $color;
         background-color: $bg--dark;
         border-radius: 50%;
         cursor: pointer;
@@ -221,7 +221,7 @@ export default {
     width: 80px;
     height: 35px !important;
     border-radius: 12.5px;
-    border: solid .1px $color;
+    border: solid 1px $color;
     transform: translateX(-20px);
     display: flex;
     align-items: center;
@@ -329,7 +329,7 @@ export default {
 
     .cv--content {
       border-radius: .6rem;
-      border: solid .1px $color;
+      border: solid 1px $color;
       background-color: $bg--dark;
       margin-left: calc(50vw - 312px);
       margin-top: calc(50vh - 438.5px);

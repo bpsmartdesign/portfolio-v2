@@ -41,7 +41,7 @@ export default {
       display: block;
       background-color: $colorTa;
       width: 100%;
-      height: .1px;
+      height: 1px;
       margin-left: 25px;
     }
   }

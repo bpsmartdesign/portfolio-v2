@@ -5,7 +5,7 @@
       <div class="wc--container flex items-center justify-center flex-wrap">
         <div v-for="work in works" :key="work.id" class="wc--item animate__animated animate__fadeIn">
           <div class="wi--img">
-            <img :src="work.img" :alt="work.name">
+            <img :src="work.img" :alt="work.name" min-width="400px" min-height="190px">
           </div>
           <div class="wi--content">
             <div class="wic--elt">
@@ -44,7 +44,7 @@ export default {
       works: [
         {
           name: 'Workerly',
-          img: '/works/workerly.jpg',
+          img: '/works/workerly.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -53,7 +53,7 @@ export default {
           shortDescription: 'Lorem ipsum dolor sit amet consectum',
         }, {
           name: 'Season',
-          img: '/works/season.jpg',
+          img: '/works/season.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -62,7 +62,7 @@ export default {
           shortDescription: 'Lorem ipsum dolor sit amet consectum',
         }, {
           name: 'Stratochange',
-          img: '/works/stratochange.jpg',
+          img: '/works/stratochange.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -71,7 +71,7 @@ export default {
           shortDescription: 'Lorem ipsum dolor sit amet consectum',
         }, {
           name: 'Argon',
-          img: '/works/argon.jpg',
+          img: '/works/argon.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -80,7 +80,7 @@ export default {
           shortDescription: 'Lorem ipsum dolor sit amet consectum',
         }, {
           name: 'Easy Gest',
-          img: '/works/easygest.jpg',
+          img: '/works/easygest.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -89,7 +89,7 @@ export default {
           shortDescription: 'Lorem ipsum dolor sit amet consectum',
         }, {
           name: 'Van Internationnal App',
-          img: '/works/van_international.jpg',
+          img: '/works/van_international.webp',
           uri: '#',
           github: '#',
           keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
@@ -187,14 +187,14 @@ export default {
           top: 12%; left: 7%;
           width: 86%;
           height: 76%;
-          border: solid .1px $color;
+          border: solid 1px $color;
           border-radius: 5px 12px;
           display: none;
 
           .wid--container {
             width: calc(100% - 10px); height: calc(100% - 10px);
             background-color: $bg--dark;
-            border: solid .1px $colorTa;
+            border: solid 1px $colorTa;
             margin: 5px;
             display: flex;
             flex-direction: column;
@@ -203,7 +203,7 @@ export default {
             border-radius: 5px 8px;
 
             .divider {
-              height: .1px;
+              height: 1px;
               width: 80%;
               background-color: $colorTa;
             }
@@ -229,7 +229,7 @@ export default {
           color: #fff;
           background-color: $color;
           padding: 20px 10px;
-          border: solid .1px #fff;
+          border: solid 1px #fff;
           border-left: solid 6px $bg;
           border-radius: 0 .3rem .3rem 0;
 
@@ -243,7 +243,7 @@ export default {
         }
 
         &:hover {
-          border: solid .1px $color;
+          border: solid 1px $color;
 
           .wi--img {
             transform: scale(1.04) rotate(.5deg);

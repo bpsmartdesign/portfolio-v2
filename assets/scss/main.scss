@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'JosefinSlab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Josefin Slab'), local('Josefin-Slab'),
+       url('../fonts/JosefinSlab.ttf') format('truetype');
+}
+
 $tColor1: #ccd6f6;
 $tColor2: #8892b0;
 $color: #f26800;
@@ -55,7 +64,7 @@ html, body {
 }
 
 .bp-btn {
-  border: solid .1px $color;
+  border: solid 1px $color;
   border-radius: .25rem;
   color: $color;
   cursor: pointer;
@@ -78,15 +87,12 @@ html, body {
 .uTxtTa { color: $colorTa; }
 .uTxtTa2 { color: $colorTa2; }
 .cTitle { color: $tColor1; }
-.big-title {
-  font-family: "Josefin Sans";
-  line-height: 1.1;
-}
+.big-title { line-height: 1.1; }
 .filter--bg { filter: invert(8%) sepia(42%) saturate(2197%) hue-rotate(193deg) brightness(86%) contrast(96%); }
 .filter--pColor { filter: invert(58%) sepia(60%) saturate(5565%) hue-rotate(3deg) brightness(96%) contrast(102%); }
 
 .app-container {
   background-color: $bg;
   color: $tColor2;
-  font-family: "Josefin Sans";
+  font-family: "JosefinSlab";
 }

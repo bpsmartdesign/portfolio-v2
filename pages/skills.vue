@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="wti--icon" color="#900" :style="{ borderColor: exp.color}">
-            <a :href="exp.uri"><img :src="exp.logo" :alt="exp.enterprise"></a>
+            <a :href="exp.uri"><img :src="exp.logo" :alt="exp.enterprise" width="50px" height="50px"></a>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default {
       experiences: [
         {
           enterprise: 'Workerly',
-          logo: '/enterprises_logo/workerly.png',
+          logo: '/enterprises_logo/workerly.webp',
           uri: '#',
           tags: ['React', 'Typescript', 'Umi Js', 'Ant Design', 'Slack', 'Jira'],
           role: 'Software Engineer',
@@ -52,7 +52,7 @@ export default {
           to: 'Now'
         }, {
           enterprise: 'Mayem solutions',
-          logo: '/enterprises_logo/mayem_solutions.png',
+          logo: '/enterprises_logo/mayem_solutions.webp',
           uri: 'https://mayem-solutions.com/',
           tags: ['VueJs', 'Laravel', 'Postgre', 'Element_UI', 'Trello', 'Gitlab', 'Flutter'],
           role: 'Fullstack Web & Mobile developper',
@@ -63,7 +63,7 @@ export default {
           to: 'July 2021'
         }, {
           enterprise: 'Stratochange',
-          logo: '/enterprises_logo/stratochange.png',
+          logo: '/enterprises_logo/stratochange.webp',
           uri: 'http://stratochange-001-site4.btempurl.com/',
           tags: ['VueJs', 'Tailwind', 'Javascript Es6 +', 'Vuetify', 'NuxtJs'],
           role: 'Front End Developper',
@@ -74,7 +74,7 @@ export default {
           to: 'Now'
         }, {
           enterprise: 'Mveng Engineering',
-          logo: '/enterprises_logo/mveng.jpg',
+          logo: '/enterprises_logo/mveng.webp',
           uri: '#',
           tags: ['Laravel', 'jQuery', 'HTML / CSS', 'Responsive Design'],
           role: 'Fullstack Web developper',
@@ -85,7 +85,7 @@ export default {
           to: 'December 2020'
         }, {
           enterprise: 'Camsoft Group',
-          logo: '/enterprises_logo/camsoft.png',
+          logo: '/enterprises_logo/camsoft.webp',
           uri: 'https://www.camsoft-group.com/',
           tags: ['Php', 'Bootstrap', 'Javascript', 'Adobe Photoshop'],
           role: 'Front End Developper',
@@ -96,7 +96,7 @@ export default {
           to: 'August 2018'
         }, {
           enterprise: 'Freelance',
-          logo: '/enterprises_logo/freelance.jpg',
+          logo: '/enterprises_logo/freelance.webp',
           uri: '#',
           tags: ['React', 'Typescript', 'Vue', 'Laravel', 'Node', 'Flutter', 'Wordpress', '...'],
           role: 'Freelancer',
@@ -147,10 +147,14 @@ export default {
       .wt--container {
         max-height: 60vh;
         overflow-y: scroll;
+        scrollbar-width: none;  /* Firefox */
 
         &::-webkit-scrollbar {
           -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
+          display: none;
+        }
+
+        &::-moz-scrollbar {
           display: none;
         }
 
@@ -179,7 +183,7 @@ export default {
               width: 80%;
 
               .divider {
-                height: .1px;
+                height: 1px;
               }
 
               ul {

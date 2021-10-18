@@ -31,11 +31,13 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 0;
     max-width: 100vw;
     height: calc(100vh - 100px);
     overflow: hidden;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: $bg--dark $bg;
 
     &::-webkit-scrollbar {
       width: 8px !important;
