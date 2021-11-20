@@ -337,7 +337,7 @@ $tablet: 768px;
             0 18px 36px -18px rgba(0, 0, 0, 0.3),
             0 -12px 36px -8px rgba(0, 0, 0, 0.025);
           position: relative;
-          border: solid;
+          border: solid 2px;
           padding: 0.6rem;
 
           img {
@@ -349,10 +349,9 @@ $tablet: 768px;
             content: '';
             position: absolute;
             height: 1px;
-            width: 100px;
-            background-color: #fff;
-            z-index: -1;
-            right: 50%;
+            width: 3vw;
+            // background-color: #fff;
+            right: calc(100% + 2px);
           }
 
           &::after {
@@ -361,8 +360,7 @@ $tablet: 768px;
             width: 1px;
             height: calc(4vh + 150px);
             background-color: #fff;
-            z-index: -1;
-            top: 50%;
+            top: calc(100% + 2px);
           }
         }
 
@@ -385,11 +383,11 @@ $tablet: 768px;
 
           .wti--icon {
             &::before {
-              left: 50%;
+              left: calc(100% + 2px);
             }
 
             &::after {
-              top: 50%;
+              top: calc(100% + 2px);
             }
           }
         }
@@ -433,7 +431,7 @@ $tablet: 768px;
 }
 
 @media (max-width: $tablet) {
-  .t-none, .t-none>*, .t-none::before, .t-none::after {
+  .t-none, .t-none::before, .t-none::after {
     display: none !important;
   }
 

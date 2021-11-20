@@ -122,15 +122,15 @@ $colorTa: #f2680045;
       cursor: pointer;
       border: solid 1px $color;
       z-index: 2;
-      -webkit-filter: grayscale(0.4);
-      filter: grayscale(0.4);
+      -webkit-filter: grayscale(0.2);
+      filter: grayscale(0.2);
 
       &:hover {
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
-        -webkit-transform: scale(1.02) rotate(-1deg);
-        -ms-transform: scale(1.02) rotate(-1deg);
-        transform: scale(1.02) rotate(-1deg);
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
       }
     }
 
@@ -138,22 +138,21 @@ $colorTa: #f2680045;
     &::before {
       content: '';
       position: absolute;
-      z-index: -1;
       width: 80%;
       height: 90%;
-      border-radius: 0.8rem 0.2rem;
+      border-radius: 0.8rem;
       border: solid 1px $color;
-      background-color: $colorTa;
     }
 
     &::after {
       top: 0;
       left: 5%;
+      z-index: -1;
     }
 
     &::before {
-      bottom: 0;
-      right: 5%;
+      bottom: 2.5%;
+      right: 7.5%;
     }
   }
 }

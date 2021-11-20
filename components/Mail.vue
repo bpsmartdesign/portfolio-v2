@@ -22,7 +22,6 @@ export default {
 
   .app-mail {
     right: 0; bottom: 0;
-    z-index: 2;
 
     .mail-content {
       writing-mode: vertical-rl;

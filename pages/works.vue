@@ -50,13 +50,12 @@
             "
           >
             <div class="wid--container p-3 font-thin text-base">
-              <p class="text-center overflow-hidden">{{ work.description }}</p>
-              <div class="divider my-5"></div>
-              <ul class="text-xs font-bold uTxtTa">
-                <li v-for="tag in work.tags" :key="tag.id" class="deco">
-                  {{ tag }}
-                </li>
-              </ul>
+              <p
+                class="text-center overflow-hidden deco"
+                @click="handleViewProject(work)"
+              >
+                See project Details
+              </p>
             </div>
           </div>
           <ul class="wic--links mb-4">
@@ -71,6 +70,59 @@
               /></a>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      v-if="toggleWorkDrawer"
+      class="drawer--container"
+      @click.self="closeDrawer"
+    >
+      <div class="drawer--content animate__animated animate__fadeInRight">
+        <h3 class="w--title">
+          {{ currentWorkView.name }}
+          <span class="close-drawer" @click="closeDrawer"
+            ><font-awesome-icon :icon="['fa', 'times']"
+          /></span>
+        </h3>
+        <h4 class="w--subtitle">
+          {{ currentWorkView.shortDescription }}
+        </h4>
+        <div class="h--line"></div>
+        <div class="dc--content">
+          <img :src="currentWorkView.img" :alt="currentWorkView.name" />
+
+          <ul class="text-xs font-thin uTxtTa2 list">
+            <li
+              v-for="tag in currentWorkView.keyword"
+              :key="tag.id"
+              class="deco"
+            >
+              {{ tag }}
+            </li>
+          </ul>
+          <ul class="text-xs font-thin uTxtTa2 list tag my-3">
+            <li v-for="tag in currentWorkView.tags" :key="tag.id" class="deco">
+              {{ tag }}
+            </li>
+          </ul>
+          <p class="my-6">
+            {{ currentWorkView.description }}
+          </p>
+        </div>
+        <div class="dc--footer flex items-center">
+          <a :href="currentWorkView.github" class="bp-btn p-2 text-xs"
+            ><font-awesome-icon :icon="['fab', 'github']"
+          /></a>
+          <a :href="currentWorkView.uri" class="bp-btn p-2 text-xs mx-3"
+            ><font-awesome-icon :icon="['fa', 'external-link-alt']"
+          /></a>
+          <a
+            :href="`mailto:${mail}?subject= Contact from : Portfolio V2`"
+            class="bp-btn px-3 py-2 uTxt text-xs right"
+            >Let's talk</a
+          >
         </div>
       </div>
     </div>
@@ -200,6 +252,9 @@ export default {
       ],
       activatedWork: undefined,
       loading: false,
+      currentWorkView: undefined,
+      toggleWorkDrawer: false,
+      mail: 'bpsmartdesign@hotmail.com',
     }
   },
   head() {
@@ -213,6 +268,26 @@ export default {
         },
       ],
     }
+  },
+
+  methods: {
+    handleViewProject(elt) {
+      this.currentWorkView = Object.assign({}, elt)
+      this.toggleWorkDrawer = true
+    },
+
+    closeDrawer() {
+      const target = document.querySelector('.drawer--content')
+
+      target.classList.remove('animate__fadeInRight')
+      target.classList.add('animate__fadeOutRight')
+
+      setTimeout(() => {
+        target.classList.remove('animate__fadeOutRight')
+        target.classList.add('animate__fadeInRight')
+        this.toggleWorkDrawer = false
+      }, 750)
+    },
   },
 }
 </script>
@@ -413,6 +488,102 @@ $bgTa2: #0a192f99;
         .wi--details {
           display: block;
         }
+      }
+    }
+  }
+}
+
+.drawer--container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  z-index: 99999 !important;
+
+  .drawer--content {
+    width: 70vw;
+    height: 100%;
+    background-color: $bg;
+    float: right;
+    position: relative;
+
+    .w--title {
+      padding: 30px 20px;
+      padding-bottom: 5px;
+      font-size: 1.5em;
+      font-weight: 600;
+      position: relative;
+
+      .close-drawer {
+        position: absolute;
+        right: 20px;
+        top: 20%;
+        color: rgba($color: #777777, $alpha: 0.4);
+        cursor: pointer;
+      }
+    }
+
+    .w--subtitle {
+      font-size: 0.8em;
+      line-height: 1.2em;
+      color: #777;
+      padding: 0 25px;
+      font-style: italic;
+      max-width: 70%;
+    }
+
+    .h--line {
+      height: 0.1px;
+      background-color: rgba($color: #777777, $alpha: 0.2);
+      margin-top: 20px;
+    }
+
+    .dc--content {
+      padding: 0 20px;
+      margin: 20px 0;
+      height: calc(100% - 220px);
+      overflow-y: scroll;
+
+      img {
+        border-radius: 0.7rem;
+        margin: 1.1rem 0;
+        width: clamp(400px, auto, 1000px);
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px !important;
+        border-radius: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $bg !important;
+        border-radius: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $bg--dark !important;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .dc--footer {
+      position: fixed;
+      bottom: 0;
+      padding: 20px;
+      width: 100%;
+      height: 80px;
+      border-top: solid 0.1px rgba($color: #777777, $alpha: 0.2);
+
+      .right {
+        position: absolute;
+        right: 20px;
       }
     }
   }

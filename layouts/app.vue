@@ -1,15 +1,15 @@
 <template>
   <div
-    class="app-container h-screen w-screen overflow-hidden text-base lg:text-xl"
+    class="app-container h-screen w-screen text-base lg:text-xl"
   >
     <Header />
-    <Social />
     <Mail />
     <section class="page--container w-screen h-screen">
       <div class="page--content">
         <Nuxt />
       </div>
     </section>
+    <Social />
   </div>
 </template>
 
@@ -24,23 +24,11 @@ export default {
 <style lang="scss" scoped>
 $bg: #0a192f;
 $bg--dark: #091320;
+$medium: 1024px;
 $tablet: 768px;
 $mobile: 640px;
-.page--container {
-  position: absolute;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 0;
-  max-width: 100vw;
-  height: calc(100vh - 100px);
+
+.app-container {
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -61,9 +49,36 @@ $mobile: 640px;
     border-radius: 0.5rem;
   }
 
+}
+.page--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-top: 100px;
+  z-index: 0;
+  height: calc(100vh - 110px);
+
   .page--content {
     width: 60vw;
     max-height: 100%;
+  }
+}
+
+@media (max-width: $medium) {
+  .page--container {
+    width: 80vw;
+    margin-left: 10vw;
+    .page--content {
+      width: 80vw;
+    }
   }
 }
 

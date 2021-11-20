@@ -34,7 +34,6 @@ export default {
   $colorTa: #f2680045;
 
   .app-social {
-    z-index: 1;
     left: 0; bottom: 0;
 
     .as--list {

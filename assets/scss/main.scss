@@ -33,9 +33,21 @@ body {
 
 .list {
   display: flex;
+  flex-wrap: wrap;
 
   li {
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &.tag {
+
+    li {
+      background: $color;
+      color: #fff;
+      padding: .2rem .5rem;
+      border-radius: .15rem;
+    }
   }
 }
 
