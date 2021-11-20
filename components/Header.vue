@@ -30,7 +30,7 @@
       </ul>
       <div class="block lg:hidden mobile-menu--container">
         <span class="font-thin uTxt" @click="mobileMenu = true"><font-awesome-icon :icon="['fa', 'bars']" /></span>
-        <ul v-if="mobileMenu" id="mobile-menu" class="mobile--menu fixed inset-0 flex flex-col items-center justify-center animate__animated animate__fadeInRight">
+        <ul v-if="mobileMenu" id="mobile-menu" class="mobile--menu fixed inset-0 flex flex-col items-center justify-center animate__animated animate__faster animate__fadeInRight">
           <span class="font-thin uTxt close--menu fixed text-4xl" @click="closeMobileMenu"><font-awesome-icon :icon="['fa', 'times']" /></span>
           <li v-for="(link, id) in links" :key="id" class="my-4 text-4xl"  :class="link.active === true && 'active'">
             <NuxtLink :to="localePath(link.uri)" class="font-medium">
