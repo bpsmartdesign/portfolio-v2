@@ -6,6 +6,38 @@
     "contact": "Contact",
     "resume": "Resume"
   },
+  "entity": {
+    "from": "from",
+    "to": "to",
+    "talk": "Let's talk",
+    "software-engineer": "Software Engineer",
+    "fullstack": "Fullstack Web & Mobile developer",
+    "fullstack-web": "Fullstack Web developer",
+    "frontend": "Frontend team lead",
+    "frontend-dev": "Frontend developer",
+    "wly-exp-desc": "Member of the Front-end Developer team, responsible for the design & production of the required components",
+    "mayem-exp-desc": "Fullstack web & mobile developer, technical manager of IT projects",
+    "strato-exp-desc": "Front end team leader, responsible for the design and implementation of interfaces and graphic components",
+    "mveng-exp-desc": "Use of modern technologies to design and build amazing responsive applications",
+    "camsoft-exp-desc": "Use of modern technologies to design and build web applications",
+    "free-exp-desc": "Always Learning new technologies and build scalable applications for clients and for myself",
+    "wly-short-desc": "Future of Workforce, Simplified!",
+    "wly-full-desc": "<p>Workerly is the first platform to unify contingent workers and employees into a single platform. Recruit and manage contract workers from multiple staffing agencies from a single dashboard. Full view of worker timesheets and weekly invoices.</p><br /><em>No surprises ever! We handle the complex stuff and save you valuable time.</em><br/><em>Managing a modern workforce made easy with a first of its kind Unified Worker Platform:</em><br/><br /><ul style=\"font-size: .85rem\"><li>→ Easy handling of employees and contract workers from a single dashboard</li><li>→ Create schedules for multiple work locations seamlessly from a central office and assign workers based on skill set, project need and budget</li><li>→ Contactless clocking with smart punch interpretation ensures accurate timesheet generation and savings on payroll expenses</li></ul>",
+    "season-short-desc": "A booking | hosting management application",
+    "season-full-desc": "Season is a web application allowing the Chicaparts company on the one hand to have an ERP for the internal planning of all of its furnished rental management activities, on the other hand to update a web extranet available to its customers:",
+    "strato-short-desc": "Manage your change projects differently",
+    "strato-full-desc": "<p>While most projects produce significant outputs, the expected changes in the medium and long term are often not forthcoming. The major cause of this insufficiency is the lack of participation and ownership of the project by its stakeholders.</p><br /><p>This low participation can be greatly improved thanks to our operational strategic change management tools: STRAT-O-CHANGE</p>",
+    "argon-short-desc": "All-in-one school software package",
+    "argon-full-desc": "All-in-one school software package, the complete private and public school management solution Modern school management platform on the move",
+    "van-short-desc": "Package tracking management application",
+    "van-full-desc": "Package tracking management application based in Cameroon",
+    "easy-short-desc": "Human resources | Accounting Application",
+    "easy-full-desc": "Fully human resources & accounting application with lot of functionalities",
+    "free": "Freelancer",
+    "meta": {
+      "og-title": "Software Engineer: bpsmartdesign Portfolio - v2"
+    }
+  },
   "home": {
     "introduction": "Hi, my name is",
     "description": "I build web & mobile app.",
@@ -16,6 +48,41 @@
     "evidence-1": "innovative",
     "evidence-2": "intuitive",
     "and": "and",
-    "contact": "Get in touch"
+    "contact": "Get in touch",
+    "meta": {
+      "description": "Hire Professional Software Engineer | Freelancer &amp; Fullstack &amp; WordPress Developer &amp; Vue.Js & Laravel Developer, Front end Engineer. Building applications and interactive experiences, hi-end solutions, website maintenance &amp; security"
+    }
+  },
+  "about": {
+    "title": "Who is this guy ?",
+    "intro": "Hello!, my name is",
+    "intro-me": "I am a software Engineer and occasionally a designer. My passion for the web dates from my first year of university in 2012 when I discovered javascript.",
+    "intro-history": "Since then, I have not hesitated to discover, design and build ultra modern and scalable platforms and applications through the multiple technologies that make up my profile.",
+    "main-tech": "Among which the main ones are :",
+    "meta": {
+      "description": "About bpsmartdesign, BIYA Paul Professional Software Engineer | Freelancer &amp; Fullstack &amp; WordPress Developer &amp; Vue.Js & Laravel Developer, Front end Engineer"
+    }
+  },
+  "skills": {
+    "title": "Work history & Skills",
+    "meta": {
+      "description": "Skills and work history of Professional Software Engineer | Freelancer &amp; Fullstack &amp; WordPress Developer &amp; Vue.Js & Laravel Developer, Front end Engineer"
+    }
+  },
+  "work": {
+    "title": "Some things I've build",
+    "see-details": "See project Details",
+    "meta": {
+      "description": "Portfolio and work history of Professional Software Engineer | Freelancer &amp; Fullstack &amp; WordPress Developer &amp; Vue.Js & Laravel Developer, Front end Engineer"
+    }
+  },
+  "contact": {
+    "title": "What's next ?",
+    "main-title": "Get in touch",
+    "text": "I’m interested in freelance and remote opportunities – especially ambitious or large projects. However, if you have other request, question or just want to say hi, I’ll try my best to get back to you!",
+    "hello": "Say Hello",
+    "meta": {
+      "description": "Contact, Chat, mail, message Hire Professional Software Engineer | Freelancer &amp; Fullstack &amp; WordPress Developer &amp; Vue.Js & Laravel Developer, Front end Engineer"
+    }
   }
 }

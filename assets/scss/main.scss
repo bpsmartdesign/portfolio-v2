@@ -40,6 +40,19 @@ body {
     margin-bottom: 0.5rem;
   }
 
+  &.center {
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+    margin-top: 2.5%;
+    max-width: 70%;
+
+    li {
+      color: #fff;
+      margin-bottom: .1rem;
+    }
+  }
+
   &.tag {
 
     li {

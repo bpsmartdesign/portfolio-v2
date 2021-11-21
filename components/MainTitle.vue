@@ -1,5 +1,5 @@
 <template>
-  <h3 class="wTxt text-3xl lg:text-5xl font-black mb-10 main--title" :num="num">{{ title }}</h3>
+  <h1 class="wTxt text-1xl lg:text-5xl font-black mb-10 main--title" :num="num">{{ title }}</h1>
 </template>
 
 <script>

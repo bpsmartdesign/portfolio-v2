@@ -12,7 +12,7 @@
     "
   >
     <div class="w-full">
-      <MainTitle title="Some things I've build" num="0.3" />
+      <MainTitle :title="$t('work.title')" num="0.3" />
       <div class="wc--container flex items-center justify-center flex-wrap">
         <div
           v-for="work in works"
@@ -36,7 +36,7 @@
               <p class="short--descritpion uTxt italic text-base">
                 {{ work.shortDescription }}
               </p>
-              <ul class="text-xs font-thin uTxtTa2 list">
+              <ul class="text-xs font-thin list center">
                 <li v-for="tag in work.keyword" :key="tag.id" class="deco">
                   {{ tag }}
                 </li>
@@ -54,17 +54,17 @@
                 class="text-center overflow-hidden deco"
                 @click="handleViewProject(work)"
               >
-                See project Details
+                {{ $t('work.see-details') }}
               </p>
             </div>
           </div>
           <ul class="wic--links mb-4">
-            <li class="text-sm mr-3">
+            <li class="text-xs mr-2">
               <a :href="work.uri"
                 ><font-awesome-icon :icon="['fa', 'external-link-alt']"
               /></a>
             </li>
-            <li class="text-sm">
+            <li class="text-xs">
               <a :href="work.github"
                 ><font-awesome-icon :icon="['fab', 'github']"
               /></a>
@@ -107,9 +107,7 @@
               {{ tag }}
             </li>
           </ul>
-          <p class="my-6">
-            {{ currentWorkView.description }}
-          </p>
+          <p class="my-6" v-html="currentWorkView.description"></p>
         </div>
         <div class="dc--footer flex items-center">
           <a :href="currentWorkView.github" class="bp-btn p-2 text-xs"
@@ -121,7 +119,7 @@
           <a
             :href="`mailto:${mail}?subject= Contact from : Portfolio V2`"
             class="bp-btn px-3 py-2 uTxt text-xs right"
-            >Let's talk</a
+            >{{ $t('entity.talk') }}</a
           >
         </div>
       </div>
@@ -138,28 +136,39 @@ export default {
         {
           name: 'Workerly',
           img: '/works/workerly.webp',
-          uri: '#',
+          uri: 'https://trial.app.workerly.io/',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
-          tags: [
-            'VueJs',
-            'Laravel',
-            'PostgreSQL',
-            'Element UI',
-            'Trello',
-            'Gitlab',
-            'Flutter',
+          keyword: [
+            '#Work Schedules',
+            '#Time-off Management',
+            '#Timesheets & Payroll',
+            '#workerly',
           ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          tags: [
+            'React Js',
+            'Umi Js',
+            'Ant Design',
+            'Django',
+            'Slack',
+            'Jira',
+            'Github',
+            'AWS',
+          ],
+          description: this.$t('entity.wly-full-desc'),
+          shortDescription: this.$t('entity.wly-short-desc'),
         },
         {
           name: 'Season',
           img: '/works/season.webp',
-          uri: '#',
+          uri: 'https://mayem-solutions.com/projets-ms/',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
+          keyword: [
+            '#beds24',
+            '#chicApart',
+            '#hosting',
+            '#accomodations',
+            '#booking',
+          ],
           tags: [
             'VueJs',
             'Laravel',
@@ -169,85 +178,60 @@ export default {
             'Gitlab',
             'Flutter',
           ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          description: this.$t('entity.season-full-desc'),
+          shortDescription: this.$t('entity.season-short-desc'),
         },
         {
           name: 'Stratochange',
           img: '/works/stratochange.webp',
-          uri: '#',
+          uri: 'http://stratochange-nuxt.herokuapp.com/',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
+          keyword: ['#change', '#stakholder', '#priorisations', '#risks'],
           tags: [
             'VueJs',
-            'Laravel',
-            'PostgreSQL',
-            'Element UI',
-            'Trello',
-            'Gitlab',
+            'NuxtJs',
+            'C#',
+            'Tailwind Css',
+            'Microsoft Azure',
             'Flutter',
           ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          description: this.$t('entity.strato-full-desc'),
+          shortDescription: this.$t('entity.strato-short-desc'),
         },
         {
           name: 'Argon',
           img: '/works/argon.webp',
-          uri: '#',
+          uri: 'https://mvengi.com/solutions/4',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
-          tags: [
-            'VueJs',
-            'Laravel',
-            'PostgreSQL',
-            'Element UI',
-            'Trello',
-            'Gitlab',
-            'Flutter',
-          ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          keyword: ['#shool management system', '#education', '#learn'],
+          tags: ['Laravel', 'jQuery', 'HTML/CSS', 'MySQL', 'cPanel'],
+          description: this.$t('entity.argon-full-desc'),
+          shortDescription: this.$t('entity.argon-short-desc'),
         },
         {
           name: 'Easy Gest',
           img: '/works/easygest.webp',
           uri: '#',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
-          tags: [
-            'VueJs',
-            'Laravel',
-            'PostgreSQL',
-            'Element UI',
-            'Trello',
-            'Gitlab',
-            'Flutter',
+          keyword: [
+            '#management',
+            '#Human resources',
+            '#Accounting',
+            '#messaging',
           ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          tags: ['VueJs', 'Laravel', 'PostgreSQL', 'Bootstrap'],
+          description: this.$t('entity.easy-full-desc'),
+          shortDescription: this.$t('entity.easy-short-desc'),
         },
         {
           name: 'Van Internationnal App',
           img: '/works/van_international.webp',
           uri: '#',
           github: '#',
-          keyword: ['#tag1', '#tag2', '#tag3', '#tag4'],
-          tags: [
-            'VueJs',
-            'Laravel',
-            'PostgreSQL',
-            'Element UI',
-            'Trello',
-            'Gitlab',
-            'Flutter',
-          ],
-          description:
-            'Alias error voluptatibus debitis deleniti nesciunt cum tempore quas, neque, vitae eligendi quam magnam nostrum sunt officia molestiae cumque, reprehenderit officiis. Dolorum?',
-          shortDescription: 'Lorem ipsum dolor sit amet consectum',
+          keyword: ['#transit', '#customs', '#clients', '#packages'],
+          tags: ['Laravel', 'MySQL', 'Bootstratp', 'Trello', 'Gitlab'],
+          description: this.$t('entity.van-full-desc'),
+          shortDescription: this.$t('entity.van-short-desc'),
         },
       ],
       activatedWork: undefined,
@@ -259,13 +243,23 @@ export default {
   },
   head() {
     return {
-      title: `Bpsmartdesign Portfolio-V2 | ${this.$t('menu.work')}`,
+      title: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+        'menu.works'
+      )}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'my website description',
+          content: this.$t('work.meta.description'),
         },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+            'menu.works'
+          )}`,
+        },
+        { hid: 'og:url', name: 'og:url', content: this.localePath('/work') },
       ],
     }
   },
@@ -384,10 +378,10 @@ $bgTa2: #0a192f99;
 
       .wi--details {
         position: absolute;
-        top: 12%;
-        left: 7%;
-        width: 86%;
-        height: 76%;
+        top: 30%;
+        left: 20%;
+        width: 60%;
+        height: 40%;
         border: solid 1px $color;
         border-radius: 5px 12px;
         display: none;
@@ -433,10 +427,9 @@ $bgTa2: #0a192f99;
 
       .wic--links {
         position: absolute;
-        bottom: 10px;
+        bottom: -5px;
         left: 0;
-        height: 10%;
-        width: 70px;
+        width: 60px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -445,9 +438,9 @@ $bgTa2: #0a192f99;
         align-items: center;
         color: #fff;
         background-color: $color;
-        padding: 20px 10px;
+        padding: 10px;
         border: solid 1px #fff;
-        border-left: solid 6px $bg;
+        border-left: solid 2px $bg;
         border-radius: 0 0.3rem 0.3rem 0;
 
         li {

@@ -16,6 +16,73 @@
     "evidence-1": "innovants",
     "evidence-2": "intuitifs",
     "and": "et",
-    "contact": "Me contacter"
+    "contact": "Me contacter",
+    "meta": {
+      "description": "Embaucher un ingénieur logiciel professionnel | Indépendant &amp; Fullstack &amp; Développeur WordPress &amp; Développeur Vue.Js & Laravel, Ingénieur Front end. Création d'applications et d'expériences interactives, solutions haut de gamme, maintenance de sites Web &amp; Sécurité"
+    }
+  },
+  "about": {
+    "title": "Qui es ce gars ?",
+    "intro": "Salut!, je m'appelle",
+    "intro-me": "Je suis ingénieur logiciel et occasionnellement designer. Ma passion pour le web date de ma première année d'université en 2012 lorsque j'ai découvert le javascript.",
+    "intro-history": "Depuis, je n'ai pas hésité à découvrir, concevoir et construire des plateformes et applications ultra modernes et évolutives à travers les multiples technologies qui composent mon profil.",
+    "main-tech": "Parmi lesquels les principales sont :",
+    "meta": {
+      "description": "À propos de bpsmartdesign, BIYA Paul Ingénieur logiciel professionnel | Indépendant &amp; Fullstack &amp; Développeur WordPress &amp; Développeur Vue.Js & Laravel, Ingénieur Front end"
+    }
+  },
+  "skills": {
+    "title": "Antécédents professionnels et Compétences",
+    "meta": {
+      "description": "Compétences et antécédents professionnels de l'ingénieur logiciel professionnel | Indépendant &amp; Fullstack &amp; Développeur WordPress &amp; Développeur Vue.Js & Laravel, Ingénieur Front end"
+    }
+  },
+  "work": {
+    "title": "Quelques Travaux",
+    "see-details": "Voir les détails du projet",
+    "meta": {
+      "description": "Portfolio et antécédents professionnels d'ingénieur logiciel professionnel | Indépendant &amp; Fullstack &amp; Développeur WordPress &amp; Développeur Vue.Js & Laravel, Ingénieur Front end"
+    }
+  },
+  "contact": {
+    "title": "Et après ?",
+    "main-title": "Entrer en contact",
+    "text": "Je suis intéressé par les opportunités de freelance et à distance - en particulier les projets ambitieux ou de grande envergure. Cependant, si vous avez d'autres demandes, questions ou simplement envie de dire bonjour, je ferai de mon mieux pour vous répondre !",
+    "hello": "Dire Bonjour",
+    "meta": {
+      "description": "Contact, chat, courrier, message Embaucher un ingénieur logiciel professionnel | Indépendant &amp; Fullstack &amp; Développeur WordPress &amp; Développeur Vue.Js & Laravel, Ingénieur Front end"
+    }
+  },
+  "entity": {
+    "from": "de",
+    "to": "à",
+    "talk": "Parlon'en",
+    "software-engineer": "Ingénieur logiciel",
+    "fullstack": "Développeur Web & Mobile Fullstack",
+    "fullstack-web": "Développeur Web Fullstack",
+    "frontend": "Chef d'équipe front-end",
+    "frontend-dev": "Développeur front-end",
+    "wly-exp-desc": "Membre de l'équipe de développeurs front-end, responsable de la conception et de la production des composants requis",
+    "mayem-exp-desc": "Développeur web & mobile fullstack, responsable technique de projets informatiques",
+    "strato-exp-desc": "Chef d'équipe front-end, responsable de la conception et de la mise en œuvre des interfaces et des composants graphiques",
+    "mveng-exp-desc": "Utilisation de technologies modernes pour concevoir et créer des applications réactives étonnantes",
+    "camsoft-exp-desc": "Utilisation des technologies modernes pour concevoir et créer des applications Web",
+    "free-exp-desc": "Toujours apprendre de nouvelles technologies et créer des applications évolutives pour les clients et pour moi-même",
+    "wly-short-desc": "L'avenir de la main-d'œuvre, simplifié !",
+    "wly-full-desc": "<p>Workerly est la première plate-forme à unifier les travailleurs intérimaires et les employés en une seule plate-forme. Recrutez et gérez les travailleurs contractuels de plusieurs agences de recrutement à partir d'un seul tableau de bord. Vue complète des feuilles de temps des travailleurs et des factures hebdomadaires.</p><br /><em> Jamais de surprises ! Nous gérons les tâches complexes et vous faisons gagner un temps précieux.</em><br/><em>Gérer une main-d'œuvre moderne en toute simplicité grâce à la première plate-forme de travail unifiée du genre :</em><br/><br /> <ul style=\"font-size : .85rem\"><li>→ Gestion facile des employés et des contractuels à partir d'un seul tableau de bord</li><li>→ Créez des horaires pour plusieurs lieux de travail de manière transparente à partir d'un bureau central et affecter les travailleurs en fonction des compétences, des besoins du projet et du budget</li><li>→ Le pointage sans contact avec interprétation intelligente des poinçons garantit une génération précise des feuilles de temps et des économies sur les dépenses salariales</li></ul>",
+    "season-short-desc": "Une application de gestion d'hébergement et de Reservations",
+    "season-full-desc": "Season est une application web permettant à la société Chicaparts d'une part de disposer d'un ERP pour la planification interne de l'ensemble de ses activités de gestion locative meublée, d'autre part de mettre à jour un extranet web à disposition de ses clients :",
+    "strato-short-desc": "Gérez vos projets de changement différemment",
+    "strato-full-desc": "<p>Alors que la plupart des projets produisent des résultats significatifs, les changements attendus à moyen et long terme ne sont souvent pas au rendez-vous. La cause majeure de cette insuffisance est le manque de participation et d'appropriation du projet par ses parties prenantes.</p><br /><p>Cette faible participation peut être grandement améliorée grâce à nos outils opérationnels de conduite du changement stratégique : STRAT-O -CHANGEMENT</p>",
+    "argon-short-desc": "Progiciel scolaire tout-en-un",
+    "argon-full-desc": "Progiciel scolaire tout-en-un, la solution complète de gestion des écoles privées et publiques Plate-forme de gestion scolaire moderne en mouvement",
+    "van-short-desc": "Application de gestion de suivi de colis",
+    "van-full-desc": "Application de gestion de suivi de colis basée au Cameroun",
+    "easy-short-desc": "Ressources humaines | Application comptable",
+    "easy-full-desc": "Application entièrement dédiée aux ressources humaines et à la comptabilité avec de nombreuses fonctionnalités",
+    "free": "Indépendant",
+    "meta": {
+      "og-title": "Ingénieur logiciel: bpsmartdesign Portfolio - v2"
+    }
   }
 }

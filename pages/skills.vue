@@ -12,7 +12,7 @@
     "
   >
     <div class="work--timeline lg:mr-10 w-full lg:w-3/4">
-      <MainTitle title="Work history & Skills" num="0.2" />
+      <MainTitle :title="$t('skills.title')" num="0.2" />
       <div class="wt--container">
         <div v-for="exp in experiences" :key="exp.id" class="wt--item">
           <div class="wti--desc">
@@ -22,8 +22,9 @@
                 class="font-thin text-sm italic"
                 :style="{ color: exp.colorTa }"
               >
-                From
-                <span class="underline cursor-pointer">{{ exp.from }}</span> to
+                {{ $t('entity.from') }}
+                <span class="underline cursor-pointer">{{ exp.from }}</span>
+                {{ $t('entity.to') }}
                 <span class="underline cursor-pointer">{{ exp.to }}</span>
               </h3>
               <p class="mt-6 text-base divide-y">{{ exp.description }}</p>
@@ -82,7 +83,7 @@ export default {
         {
           enterprise: 'Workerly',
           logo: '/enterprises_logo/workerly.webp',
-          uri: '#',
+          uri: 'https://www.workerly.io/',
           tags: [
             'React',
             'Typescript',
@@ -91,11 +92,10 @@ export default {
             'Slack',
             'Jira',
           ],
-          role: 'Software Engineer',
+          role: this.$t('entity.software-engineer'),
           color: '#3c64ac',
           colorTa: '#3c64ac80',
-          description:
-            'Member of the Front-end Developer team, responsible for the design & production of the required components',
+          description: this.$t('entity.wly-exp-desc'),
           from: 'September 2021',
           to: 'Now',
         },
@@ -112,37 +112,34 @@ export default {
             'Gitlab',
             'Flutter',
           ],
-          role: 'Fullstack Web & Mobile developper',
+          role: this.$t('entity.fullstack'),
           color: '#fdb91f',
           colorTa: '#fdb91f80',
-          description:
-            'Fullstack web & mobile developer, technical manager of IT projects',
+          description: this.$t('entity.mayem-exp-desc'),
           from: 'Febuary 2021',
           to: 'July 2021',
         },
         {
           enterprise: 'Stratochange',
           logo: '/enterprises_logo/stratochange.webp',
-          uri: 'http://stratochange-001-site4.btempurl.com/',
+          uri: 'http://stratochange-nuxt.herokuapp.com/',
           tags: ['VueJs', 'Tailwind', 'Javascript Es6 +', 'Vuetify', 'NuxtJs'],
-          role: 'Front End Developper',
+          role: this.$t('entity.frontend'),
           color: '#0367b5',
           colorTa: '#0367b580',
-          description:
-            'Front end team leader, responsible for the design and implementation of interfaces and graphic components',
+          description: this.$t('entity.strato-exp-desc'),
           from: 'November 2019',
           to: 'Now',
         },
         {
           enterprise: 'Mveng Engineering',
           logo: '/enterprises_logo/mveng.webp',
-          uri: '#',
+          uri: 'https://mvengi.com/',
           tags: ['Laravel', 'jQuery', 'HTML / CSS', 'Responsive Design'],
-          role: 'Fullstack Web developper',
+          role: this.$t('entity.fullstack-web'),
           color: '#9901d0',
           colorTa: '#9901d080',
-          description:
-            'Use of modern technologies to design and build amazing responsive applications',
+          description: this.$t('entity.mveng-exp-desc'),
           from: 'April 2018',
           to: 'December 2020',
         },
@@ -151,11 +148,10 @@ export default {
           logo: '/enterprises_logo/camsoft.webp',
           uri: 'https://www.camsoft-group.com/',
           tags: ['Php', 'Bootstrap', 'Javascript', 'Adobe Photoshop'],
-          role: 'Front End Developper',
+          role: this.$t('entity.fullstack-web'),
           color: '#006fbd',
           colorTa: '#006fbd80',
-          description:
-            'Use of modern technologies to design and build web applications',
+          description: this.$t('entity.camsoft-exp-desc'),
           from: 'March 2017',
           to: 'August 2018',
         },
@@ -173,11 +169,10 @@ export default {
             'Wordpress',
             '...',
           ],
-          role: 'Freelancer',
+          role: this.$t('entity.free'),
           color: '#404042',
           colorTa: '#40404280',
-          description:
-            'Always Learning new technologies and build scalable applications for clients and for myself',
+          description: this.$t('entity.free-exp-desc'),
           from: 'October 2012',
           to: 'Now',
         },
@@ -205,13 +200,23 @@ export default {
   },
   head() {
     return {
-      title: `Bpsmartdesign Portfolio-V2 | ${this.$t('menu.skills')}`,
+      title: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+        'menu.skills'
+      )}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'my website description',
+          content: this.$t('skills.meta.description'),
         },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+            'menu.skills'
+          )}`,
+        },
+        { hid: 'og:url', name: 'og:url', content: this.localePath('/skills') },
       ],
     }
   },
@@ -431,14 +436,16 @@ $tablet: 768px;
 }
 
 @media (max-width: $tablet) {
-  .t-none, .t-none::before, .t-none::after {
+  .t-none,
+  .t-none::before,
+  .t-none::after {
     display: none !important;
   }
 
   .wti--desc {
     width: 100% !important;
     flex-direction: column !important;
-    border-radius: .5rem !important;
+    border-radius: 0.5rem !important;
 
     .wtid--content {
       width: 100% !important;
@@ -447,7 +454,7 @@ $tablet: 768px;
     .wtid--aside {
       width: 100% !important;
       height: auto !important;
-      padding: .8rem 0;
+      padding: 0.8rem 0;
     }
   }
 }

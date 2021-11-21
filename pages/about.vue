@@ -12,19 +12,13 @@
     "
   >
     <div class="about--text w-full lg:mr-10 lg:w-3/4">
-      <MainTitle title="Who is this guy ?" num="0.1" />
+      <MainTitle :title="$t('about.title')" num="0.1" />
       <p>
-        Hello!, My name is <span class="uTxtTa deco">BIYA Paul,</span> am a
-        software Engineer and occasionally a designer. My passion for the web
-        dates from my first year of university in 2012 when I discovered
-        javascript.
+        {{ $t('about.intro') }} <span class="uTxtTa deco">BIYA Paul,</span>
+        {{ $t('about.intro-me') }}
       </p>
-      <p>
-        Since then, I have not hesitated to discover, design and build ultra
-        modern and scalable platforms and applications through the multiple
-        technologies that make up my profile.
-      </p>
-      <p>Among which the main ones are :</p>
+      <p>{{ $t('about.intro-history') }}</p>
+      <p>{{ $t('about.main-tech') }}</p>
       <ul class="list--tech list-inside">
         <li v-for="tech in mainTechno" :key="tech.id">
           <a class="ml-4" :href="tech.uri" target="blank"
@@ -64,12 +58,27 @@ export default {
   },
   head() {
     return {
-      title: `Bpsmartdesign Portfolio-V2 | ${this.$t('menu.about')}`,
+      title: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+        'menu.about'
+      )}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'my website description',
+          content: this.$t('about.meta.description'),
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+            'menu.about'
+          )}`,
+        },
+        { hid: 'og:url', name: 'og:url', content: this.localePath('/about') },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: 'https://bpsmartdesign.tk/me.webp',
         },
       ],
     }

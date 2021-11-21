@@ -6,6 +6,38 @@
     "contact": "Contactar",
     "resume": "Reanudar"
   },
+  "entity": {
+    "from": "from",
+    "to": "to",
+    "talk": "Let's talk",
+    "software-engineer": "Ingeniero de software",
+    "fullstack": "Desarrollador web y móvil Fullstack",
+    "fullstack-web": "Desarrollador web fullstack",
+    "frontend": "Líder del equipo de frontend",
+    "frontend-dev": "Desarrollador frontend",
+    "wly-exp-desc": "Miembro del equipo de desarrolladores de front-end, responsable del diseño y producción de los componentes necesarios",
+    "mayem-exp-desc": "Desarrollador fullstack web y móvil, gerente técnico de proyectos de TI",
+    "strato-exp-desc": "Líder del equipo de front-end, responsable del diseño e implementación de interfaces y componentes gráficos",
+    "mveng-exp-desc": "Uso de tecnologías modernas para diseñar y crear aplicaciones de respuesta asombrosas",
+    "camsoft-exp-desc": "Uso de tecnologías modernas para diseñar y construir aplicaciones web.",
+    "free-exp-desc": "Siempre aprendiendo nuevas tecnologías y construyendo aplicaciones escalables para los clientes y para mí.",
+    "wly-short-desc": "¡Futuro de la fuerza laboral, simplificado!",
+    "wly-full-desc": "<p>Workerly es la primera plataforma que unifica a los trabajadores y empleados eventuales en una sola plataforma. Reclute y administre trabajadores contratados de varias agencias de personal desde un solo panel. Vista completa de las hojas de horas trabajadas y las facturas semanales. </p> <br /> <em> ¡Sin sorpresas nunca! Manejamos las cosas complejas y le ahorramos un tiempo valioso. </em> <br/> <em> Gestionar una fuerza laboral moderna de forma fácil con la primera plataforma de trabajo unificada de su tipo: </em> <br/> <br /> <ul style = \"font-size: .85rem \"> <li> → Fácil manejo de empleados y trabajadores contratados desde un solo tablero </li> <li> → Cree horarios para múltiples ubicaciones de trabajo sin problemas desde una oficina central y Asignar trabajadores según el conjunto de habilidades, la necesidad del proyecto y el presupuesto </li> <li> → La sincronización sin contacto con interpretación inteligente de perforaciones asegura la generación precisa de hojas de horas y ahorros en los gastos de nómina </li> </ul>",
+    "season-short-desc": "Una reserva | aplicación de gestión de alojamiento",
+    "season-full-desc": "Season es una aplicación web que permite a la empresa Chicaparts por un lado disponer de un ERP para la planificación interna de todas sus actividades de gestión de alquiler amueblado, por otro lado actualizar una extranet web a disposición de sus clientes:",
+    "strato-short-desc": "Gestione sus proyectos de cambio de forma diferente",
+    "strato-full-desc": "<p> Si bien la mayoría de los proyectos producen resultados significativos, los cambios esperados a mediano y largo plazo a menudo no se producen. La principal causa de esta insuficiencia es la falta de participación y propiedad del proyecto por parte de sus partes interesadas. </p> <br /> <p> Esta baja participación se puede mejorar enormemente gracias a nuestras herramientas operativas de gestión del cambio estratégico: STRAT-O -CAMBIO </p>",
+    "argon-short-desc": "Paquete de software escolar todo en uno",
+    "argon-full-desc": "Paquete de software escolar todo en uno, la solución completa de gestión de escuelas públicas y privadas Plataforma de gestión escolar moderna en movimiento",
+    "van-short-desc": "Aplicación de gestión de seguimiento de paquetes",
+    "van-full-desc": "Aplicación de gestión de seguimiento de paquetes con sede en Camerún",
+    "easy-short-desc": "Recursos humanos | Aplicación de contabilidad",
+    "easy-full-desc": "Aplicación totalmente de recursos humanos y contabilidad con muchas funcionalidades",
+    "free": "Persona de libre dedicación",
+    "meta": {
+      "og-title": "Ingeniero de software: bpsmartdesign Portfolio - v2"
+    }
+  },
   "home": {
     "introduction": "Hola, mi nombre es",
     "description": "Construyo una aplicación web y móvil.",
@@ -16,6 +48,41 @@
     "evidence-1": "innovador",
     "evidence-2": "intuitivo",
     "and": "y",
-    "contact": "Ponerse en contacto"
+    "contact": "Ponerse en contacto",
+    "meta": {
+      "description": "Contratar a un ingeniero de software profesional | Freelancer &amp; Pila completa &amp; Desarrollador de WordPress &amp; Vue.Js & Laravel Developer, ingeniero de front-end. Creación de aplicaciones y experiencias interactivas, soluciones de alta gama, mantenimiento de sitios web y amp; seguridad"
+    }
+  },
+  "about": {
+    "title": "Quién es este chico ?",
+    "intro": "Hola, mi nombre es",
+    "intro-me": "Soy ingeniero de software y ocasionalmente diseñador. Mi pasión por la web data de mi primer año de universidad en 2012 cuando descubrí javascript.",
+    "intro-history": "Desde entonces, no he dudado en descubrir, diseñar y construir plataformas y aplicaciones ultramodernas y escalables a través de las múltiples tecnologías que conforman mi perfil.",
+    "main-tech": "Entre las que destacan las principales:",
+    "meta": {
+      "description": "Acerca de bpsmartdesign, BIYA Paul Professional Software Engineer | Freelancer &amp; Pila completa &amp; Desarrollador de WordPress &amp; Desarrollador de Vue.Js y Laravel, ingeniero de front-end"
+    }
+  },
+  "skills": {
+    "title": "Historial laboral y habilidades",
+    "meta": {
+      "description": "Habilidades e historial laboral del ingeniero de software profesional | Freelancer &amp; Pila completa &amp; Desarrollador de WordPress &amp; Desarrollador de Vue.Js y Laravel, ingeniero de interfaz"
+    }
+  },
+  "work": {
+    "title": "Algunas cosas que he construido",
+    "see-details": "Ver detalles del proyecto",
+    "meta": {
+      "description": "Portafolio e historial laboral de Professional Software Engineer | Freelancer &amp; Pila completa &amp; Desarrollador de WordPress &amp; Desarrollador de Vue.Js y Laravel, ingeniero de front-end"
+    }
+  },
+  "contact": {
+    "title": "Que sigue ?",
+    "main-title": "Ponerse en contacto",
+    "text": "Estoy interesado en oportunidades independientes y remotas, especialmente proyectos ambiciosos o grandes. Sin embargo, si tiene otra solicitud, pregunta o simplemente quiere saludar, haré todo lo posible para responderle.",
+    "hello": "Di hola",
+    "meta": {
+      "description": "Contacto, chat, correo, mensaje Contratar a un ingeniero de software profesional | Freelancer &amp; Pila completa &amp; Desarrollador de WordPress &amp; Desarrollador de Vue.Js y Laravel, ingeniero de interfaz"
+    }
   }
 }

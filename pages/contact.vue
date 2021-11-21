@@ -2,19 +2,17 @@
   <div class="contact--container">
     <h4 class="subtitle uTxt my-3">
       <span class="text-base uTxt font-thin">04.</span>
-      What's next ?
+      {{ $t('contact.title') }}
     </h4>
-    <h3 class="font-black text-4xl md:text-6xl cTitle text-center">
-      Get in touch
-    </h3>
+    <h1 class="font-black text-4xl md:text-6xl cTitle text-center">
+      {{ $t('contact.main-title') }}
+    </h1>
     <p class="my-8 leading-relaxed text-center font-thin">
-      I’m interested in freelance and remote opportunities – especially
-      ambitious or large projects. However, if you have other request, question
-      or just want to say hi, I’ll try my best to get back to you!
+      {{ $t('contact.text') }}
     </p>
     <button class="bp-btn px-4 py-3">
       <a :href="`mailto:${mail}?subject= Contact from : Portfolio V2`">
-        Say Hello
+        {{ $t('contact.hello') }}
       </a>
     </button>
   </div>
@@ -30,13 +28,23 @@ export default {
   },
   head() {
     return {
-      title: `Bpsmartdesign Portfolio-V2 | ${this.$t('menu.contact')}`,
+      title: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+        'menu.contact'
+      )}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'my website description',
+          content: this.$t('contact.meta.description'),
         },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2 | ${this.$t(
+            'menu.contact'
+          )}`,
+        },
+        { hid: 'og:url', name: 'og:url', content: this.localePath('/contact') },
       ],
     }
   },
