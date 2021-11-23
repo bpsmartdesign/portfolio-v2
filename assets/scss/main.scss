@@ -817,6 +817,10 @@ body {
     display: block !important;
   }
 
+  .wi--content {
+    display: none;
+  }
+
   body, html { min-height: 100%}
   .drawer-container {
     height: 100%;
