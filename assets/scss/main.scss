@@ -808,9 +808,12 @@ body {
 // Detect Safari browser
 @media not all and (min-resolution:.001dpcm) {
   .wi--img {
-    max-height: 400px;
+    height: auto;
     img {
-      height: 100%;
+      width: 100%;
     }
+  }
+  .wi--details {
+    display: block !important;
   }
 }
