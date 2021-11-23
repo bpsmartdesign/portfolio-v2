@@ -33,10 +33,19 @@
                 {{ work.name }}
               </h3>
               <div class="short--divider my-3"></div>
-              <p class="short--descritpion uTxt italic text-base">
+              <p
+                class="
+                  short--descritpion
+                  uTxt
+                  italic
+                  text-base text-center
+                  px-3
+                  leading-3
+                "
+              >
                 {{ work.shortDescription }}
               </p>
-              <ul class="text-xs font-thin list center">
+              <ul class="text-xs font-thin list center text-list">
                 <li v-for="tag in work.keyword" :key="tag.id" class="deco">
                   {{ tag }}
                 </li>
@@ -49,16 +58,16 @@
               animate__animated animate__delay-slow animate__flipInY
             "
           >
-            <div class="wid--container p-3 font-thin text-base">
+            <div class="wid--container font-thin">
               <p
-                class="text-center overflow-hidden deco"
+                class="text-center overflow-hidden deco m--small"
                 @click="handleViewProject(work)"
               >
                 {{ $t('work.see-details') }}
               </p>
             </div>
           </div>
-          <ul class="wic--links mb-4">
+          <ul class="wic--links m-none mb-4">
             <li class="text-xs mr-2">
               <a :href="work.uri"
                 ><font-awesome-icon :icon="['fa', 'external-link-alt']"
@@ -93,7 +102,7 @@
         <div class="dc--content">
           <img :src="currentWorkView.img" :alt="currentWorkView.name" />
 
-          <ul class="text-xs font-thin uTxtTa2 list">
+          <ul class="text-xs font-thin uTxtTa2 list text-list">
             <li
               v-for="tag in currentWorkView.keyword"
               :key="tag.id"
@@ -116,11 +125,24 @@
           <a :href="currentWorkView.uri" class="bp-btn p-2 text-xs mx-3"
             ><font-awesome-icon :icon="['fa', 'external-link-alt']"
           /></a>
+          <a href="https://t.me/bpsmartdesign" class="bp-btn p-2 text-xs no-display m-visible"
+            ><font-awesome-icon :icon="['fab', 'telegram']"
+          /></a>
+          <a href="https://wa.me/+237670331580" class="bp-btn p-2 text-xs mx-3 no-display m-visible"
+            ><font-awesome-icon :icon="['fab', 'whatsapp']"
+          /></a>
           <a
             :href="`mailto:${mail}?subject= Contact from : Portfolio V2`"
             class="bp-btn px-3 py-2 uTxt text-xs right"
-            >{{ $t('entity.talk') }}</a
           >
+            <font-awesome-icon
+              :icon="['fa', 'envelope']"
+              class="no-display m-visible"
+            />
+            <span class="m-none">
+              {{ $t('entity.talk') }}
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -285,317 +307,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-$tColor1: #ccd6f6;
-$tColor2: #8892b0;
-$color: #f26800;
-$colorTa: #f2680045;
-$colorTa2: #f2680099;
-$bg--dark: #091320;
-$bg: #0a192f;
-$bgTa: #0a192fcc;
-$bgTa2: #0a192f99;
-
-.work--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  .wc--container {
-    &::-webkit-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-      display: none;
-    }
-
-    .wc--item {
-      margin-bottom: 3vh;
-      overflow: hidden;
-      border-radius: 0.4rem;
-      position: relative;
-
-      .wi--img {
-        height: 100%;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .wi--content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $bgTa;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-
-        .wic--elt {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          height: 100%;
-          -webkit-transition: all 0.8s ease-in;
-          -o-transition: all 0.8s ease-in;
-          transition: all 0.8s ease-in;
-
-          .short--divider {
-            width: 10%;
-            height: 1px;
-            background-color: $color;
-          }
-        }
-      }
-
-      .wi--details {
-        position: absolute;
-        top: 30%;
-        left: 20%;
-        width: 60%;
-        height: 40%;
-        border: solid 1px $color;
-        border-radius: 5px 12px;
-        display: none;
-
-        .wid--container {
-          width: calc(100% - 10px);
-          height: calc(100% - 10px);
-          background-color: $bg--dark;
-          border: solid 1px $colorTa;
-          margin: 5px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          border-radius: 5px 8px;
-
-          .divider {
-            height: 1px;
-            width: 80%;
-            background-color: $colorTa;
-          }
-
-          ul {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-
-            li {
-              margin-right: 0.5rem;
-            }
-          }
-        }
-      }
-
-      .wic--links {
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 60px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        color: #fff;
-        background-color: $color;
-        padding: 10px;
-        border: solid 1px #fff;
-        border-left: solid 2px $bg;
-        border-radius: 0 0.3rem 0.3rem 0;
-
-        li {
-          &:hover {
-            color: $bg--dark;
-            -webkit-transition: all 0.15s ease-in-out;
-            -o-transition: all 0.15s ease-in-out;
-            transition: all 0.15s ease-in-out;
-            -webkit-transform: scale(1.05);
-            -ms-transform: scale(1.05);
-            transform: scale(1.05);
-          }
-        }
-      }
-
-      &:hover {
-        border: solid 1px $color;
-
-        .wi--img {
-          -webkit-transform: scale(1.04) rotate(0.5deg);
-          -ms-transform: scale(1.04) rotate(0.5deg);
-          transform: scale(1.04) rotate(0.5deg);
-        }
-
-        .wi--content {
-          background-color: $bgTa2;
-
-          .wic--elt {
-            -webkit-transition: all 0.6s ease-in;
-            -o-transition: all 0.6s ease-in;
-            transition: all 0.6s ease-in;
-            -webkit-transform: translateY(-150%);
-            -ms-transform: translateY(-150%);
-            transform: translateY(-150%);
-          }
-        }
-
-        .wi--details {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-.drawer--container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba($color: #000000, $alpha: 0.6);
-  z-index: 99999 !important;
-
-  .drawer--content {
-    width: 70vw;
-    height: 100%;
-    background-color: $bg;
-    float: right;
-    position: relative;
-
-    .w--title {
-      padding: 30px 20px;
-      padding-bottom: 5px;
-      font-size: 1.5em;
-      font-weight: 600;
-      position: relative;
-
-      .close-drawer {
-        position: absolute;
-        right: 20px;
-        top: 20%;
-        color: rgba($color: #777777, $alpha: 0.4);
-        cursor: pointer;
-      }
-    }
-
-    .w--subtitle {
-      font-size: 0.8em;
-      line-height: 1.2em;
-      color: #777;
-      padding: 0 25px;
-      font-style: italic;
-      max-width: 70%;
-    }
-
-    .h--line {
-      height: 0.1px;
-      background-color: rgba($color: #777777, $alpha: 0.2);
-      margin-top: 20px;
-    }
-
-    .dc--content {
-      padding: 0 20px;
-      margin: 20px 0;
-      height: calc(100% - 220px);
-      overflow-y: scroll;
-
-      img {
-        border-radius: 0.7rem;
-        margin: 1.1rem 0;
-        width: clamp(400px, auto, 1000px);
-      }
-
-      p {
-        font-size: 1rem;
-        line-height: 1.2rem;
-      }
-
-      &::-webkit-scrollbar {
-        width: 8px !important;
-        border-radius: 0.5rem;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: $bg !important;
-        border-radius: 0.5rem;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: $bg--dark !important;
-        border-radius: 0.5rem;
-      }
-    }
-
-    .dc--footer {
-      position: fixed;
-      bottom: 0;
-      padding: 20px;
-      width: 100%;
-      height: 80px;
-      border-top: solid 0.1px rgba($color: #777777, $alpha: 0.2);
-
-      .right {
-        position: absolute;
-        right: 20px;
-      }
-    }
-  }
-}
-
-@media (min-width: '1280px') {
-  .wc--container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-
-    .wc--item {
-      width: calc(50% - 10px) !important;
-    }
-  }
-}
-</style>

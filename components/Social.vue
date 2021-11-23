@@ -19,10 +19,12 @@ export default {
     return {
       socials: [
         { label: 'Github', icon: 'github', uri: 'https://github.com/bpsmartdesign' },
+        { label: 'Telegram', icon: 'telegram', uri: 'https://t.me/bpsmartdesign' },
         { label: 'LinkedIn', icon: 'linkedin', uri: 'https://www.linkedin.com/in/bpsmartdesign/' },
         { label: 'Twitter', icon: 'twitter', uri: 'https://twitter.com/bpsmartdesign' },
         { label: 'Codepen', icon: 'codepen', uri: 'https://codepen.io/bpsmartdesign' },
         { label: 'Dribbble', icon: 'dribbble', uri: 'https://dribbble.com/bpsmartdesign' },
+        { label: 'Whatsapp', icon: 'whatsapp', uri: 'https://wa.me/+237670331580' },
       ]
     }
   }
