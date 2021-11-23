@@ -824,8 +824,14 @@ body {
   body,
   html {
     min-height: -webkit-fill-available;
+    height: -moz-available;
+    height: fill-available;
+    height: stretch; /* Latest specification */
   }
   .drawer-container {
     height: -webkit-fill-available;
+    height: -moz-available;
+    height: fill-available;
+    height: stretch; /* Latest specification */
   }
 }
