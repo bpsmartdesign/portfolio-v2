@@ -30,8 +30,10 @@ $bgTa2: #0a192f99;
 html,
 body {
   max-width: 100vw;
-  min-height: 100vh;
   min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
+  min-height: stretch; /* Latest specification */
   overflow: hidden;
 }
 
@@ -210,7 +212,6 @@ body {
   margin-left: 5vw;
   margin-top: 100px;
   z-index: 0;
-  // height: calc(100vh - 110px);
 
   .page--content {
     width: 60vw;
@@ -688,7 +689,10 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: fill-available;
+    height: stretch; /* Latest specification */
     background-color: rgba($color: #000000, $alpha: 0.6);
     z-index: 99999 !important;
 
