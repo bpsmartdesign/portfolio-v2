@@ -288,6 +288,10 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
       margin-bottom: 0rem !important;
     }
   }
+
+  .skill--container {
+    width: 80vw;
+  }
 } // Mobile Only
 
 //////////////////////////////////////////////////////// Tablet Only
