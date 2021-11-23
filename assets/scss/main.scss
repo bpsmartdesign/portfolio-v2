@@ -31,6 +31,7 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   overflow: hidden;
 }
 
@@ -804,9 +805,8 @@ body {
   }
 }
 
-
 // Detect Safari browser
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   .wi--img {
     height: auto;
     img {
@@ -818,11 +818,14 @@ body {
   }
 
   .wi--content {
-    display: none;
+    display: none !important;
   }
 
-  body, html { min-height: 100%}
+  body,
+  html {
+    min-height: -webkit-fill-available;
+  }
   .drawer-container {
-    height: 100%;
+    height: -webkit-fill-available;
   }
 }
