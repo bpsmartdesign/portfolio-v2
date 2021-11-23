@@ -1,8 +1,8 @@
 <template>
-  <div class="app-container h-screen w-screen text-base lg:text-xl">
+  <div class="app-container w-screen text-base lg:text-xl">
     <Header />
     <Mail />
-    <section class="page--container w-screen h-screen">
+    <section class="page--container w-screen">
       <div class="page--content">
         <Nuxt />
       </div>
