@@ -42,7 +42,7 @@
               class="wtid--aside font-thin text-sm"
               :style="{ backgroundColor: exp.color }"
             >
-              <a :href="exp.uri">{{ exp.enterprise }}</a>
+              <a :href="exp.uri" target="blank">{{ exp.enterprise }}</a>
             </div>
           </div>
           <div
@@ -50,7 +50,7 @@
             color="#900"
             :style="{ borderColor: exp.color }"
           >
-            <a :href="exp.uri"
+            <a :href="exp.uri" target="blank"
               ><img
                 :src="exp.logo"
                 :alt="exp.enterprise"

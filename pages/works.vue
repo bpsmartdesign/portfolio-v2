@@ -69,12 +69,12 @@
           </div>
           <ul class="wic--links m-none mb-4">
             <li class="text-xs mr-2">
-              <a :href="work.uri"
+              <a :href="work.uri" target="blank"
                 ><font-awesome-icon :icon="['fa', 'external-link-alt']"
               /></a>
             </li>
             <li class="text-xs">
-              <a :href="work.github"
+              <a :href="work.github" target="blank"
                 ><font-awesome-icon :icon="['fab', 'github']"
               /></a>
             </li>
@@ -119,16 +119,28 @@
           <p class="my-6" v-html="currentWorkView.description"></p>
         </div>
         <div class="dc--footer flex items-center">
-          <a :href="currentWorkView.github" class="bp-btn p-2 text-xs"
+          <a
+            :href="currentWorkView.github"
+            target="blank"
+            class="bp-btn p-2 text-xs"
             ><font-awesome-icon :icon="['fab', 'github']"
           /></a>
-          <a :href="currentWorkView.uri" class="bp-btn p-2 text-xs mx-3"
+          <a
+            :href="currentWorkView.uri"
+            target="blank"
+            class="bp-btn p-2 text-xs mx-3"
             ><font-awesome-icon :icon="['fa', 'external-link-alt']"
           /></a>
-          <a href="https://t.me/bpsmartdesign" class="bp-btn p-2 text-xs no-display m-visible"
+          <a
+            href="https://t.me/bpsmartdesign"
+            target="blank"
+            class="bp-btn p-2 text-xs no-display m-visible"
             ><font-awesome-icon :icon="['fab', 'telegram']"
           /></a>
-          <a href="https://wa.me/+237670331580" class="bp-btn p-2 text-xs mx-3 no-display m-visible"
+          <a
+            href="https://wa.me/+237670331580"
+            target="blank"
+            class="bp-btn p-2 text-xs mx-3 no-display m-visible"
             ><font-awesome-icon :icon="['fab', 'whatsapp']"
           /></a>
           <a

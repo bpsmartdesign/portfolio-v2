@@ -111,9 +111,9 @@
               <span class="deco">{{ $t(link.label) }}</span>
             </NuxtLink>
           </li>
-          <li class="bp-btn px-3 py-2 uTxt mt-10" @click="showResume = true">
+          <a class="bp-btn px-3 py-2 uTxt mt-10" href="/cv_en.pdf" download="">
             {{ $t('menu.resume') }}
-          </li>
+          </a>
         </ul>
       </div>
     </div>

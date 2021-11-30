@@ -10,7 +10,7 @@
 $tColor1: #ccd6f6;
 $tColor2: #8892b0;
 $color: #f26800;
-$colorTa: #f2680045;
+$colorTa: #f2680090;
 $colorTa2: #f2680066;
 $bg: #0a192f;
 $bg--dark: #091320;
@@ -164,6 +164,7 @@ body {
 }
 .uTxtTa {
   color: $colorTa;
+  text-shadow: 2px 2px 30px #ffffff;
 }
 .uTxtTa2 {
   color: $colorTa2;
@@ -527,10 +528,10 @@ body {
       position: relative;
 
       .wi--img {
-        height: 100%;
+        height: auto;
 
         img {
-          height: 100%;
+          width: 100%;
         }
       }
 
