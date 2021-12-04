@@ -34,6 +34,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: $bg--dark;
   overflow-x: hidden;
+  background: $bg;
 
   &::-webkit-scrollbar {
     width: 8px !important;
@@ -164,7 +165,7 @@ body {
 }
 .uTxtTa {
   color: $colorTa;
-  text-shadow: 2px 2px 30px #ffffff;
+  text-shadow: 2px 2px 30px #ffffff66;
 }
 .uTxtTa2 {
   color: $colorTa2;

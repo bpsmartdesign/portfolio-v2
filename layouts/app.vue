@@ -8,6 +8,11 @@
       </div>
     </section>
     <Social />
+    <div v-if="new Date().getMonth() === 11" class="guirlande--container">
+      <div class="guirlande guirlande1"></div>
+      <div class="guirlande guirlande2"></div>
+      <div class="guirlande guirlande3"></div>
+    </div>
   </div>
 </template>
 
@@ -20,24 +25,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .guirlande {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    z-index: 10;
+    left: 0;
 
-// @media only screen and (max-width: $medium) and (min-width: calc($tablet + 1px)) {
-//   .page--container {
-//     width: 80vw;
-//     margin-left: 10vw;
-//     border: solid green !important;
-//     .page--content {
-//       width: 80vw;
-//     }
-//   }
-// }
-
-// @media only screen and (max-width: $tablet) and (min-width: clac($mobile + 1px)) {
-//   .page--content {
-//     width: 70vw !important;
-//   }
-//   .page--container {
-//     border: solid yellow !important;
-//   }
-// }
+    &.guirlande1 {
+      height: 120px;
+      background: url('/guirlandes/guirlande1.png') repeat-x 300% top;
+      top: -23px;
+    }
+    &.guirlande2 {
+      height: 120px;
+      background: url('/guirlandes/guirlande2.png') repeat-x 70% top;
+      top: -71px;
+    }
+    &.guirlande3 {
+      height: 120px;
+      background: url('/guirlandes/guirlande3.png') repeat-x 10% top;
+      top: -50px;
+    }
+  }
 </style>
