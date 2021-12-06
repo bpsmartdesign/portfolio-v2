@@ -129,7 +129,7 @@ export default {
           colorTa: '#0367b580',
           description: this.$t('entity.strato-exp-desc'),
           from: 'November 2019',
-          to: 'Now',
+          to: 'December 2021',
         },
         {
           enterprise: 'Mveng Engineering',
