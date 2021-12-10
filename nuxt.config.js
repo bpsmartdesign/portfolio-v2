@@ -1,5 +1,3 @@
-// import { getRoutes } from './helpers/sitemap'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -19,7 +17,8 @@ export default {
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2',
+        content:
+          'BIYA Paul (bpsmartdesign) - Software Engineer: Portfolio - v2',
       },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       {
@@ -30,7 +29,9 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: `${process.env.WEBSITE_URL || 'https://bpsmartdesign.tk'}/icon.png`,
+        content: `${
+          process.env.WEBSITE_URL || 'https://bpsmartdesign.tk'
+        }/icon.png`,
       },
       {
         hid: 'og:site_name',
@@ -72,7 +73,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/animate.css', '~/assets/scss/main.scss', '~/assets/scss/responsive.scss'],
+  css: [
+    '~/assets/css/animate.css',
+    '~/assets/scss/main.scss',
+    '~/assets/scss/responsive.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -203,6 +208,8 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '',
-    Sitemap: `${process.env.WEBSITE_URL || 'https://bpsmartdesign.tk'}/sitemap.xml`,
+    Sitemap: `${
+      process.env.WEBSITE_URL || 'https://bpsmartdesign.tk'
+    }/sitemap.xml`,
   },
 }
