@@ -81,6 +81,25 @@ export default {
     return {
       experiences: [
         {
+          enterprise: 'Aichemy',
+          logo: '/enterprises_logo/aichemy.webp',
+          uri: 'https://aichemy.dev/',
+          tags: [
+            'VueJs',
+            'Javascript',
+            'Element Ui',
+            'Django',
+            'Slack',
+            'Python',
+          ],
+          role: this.$t('entity.software-engineer'),
+          color: '#bf7b17',
+          colorTa: '#bf7b1780',
+          description: this.$t('entity.aichemy-exp-desc'),
+          from: 'December 2021',
+          to: 'Now',
+        },
+        {
           enterprise: 'Workerly',
           logo: '/enterprises_logo/workerly.webp',
           uri: 'https://www.workerly.io/',

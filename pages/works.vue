@@ -168,6 +168,29 @@ export default {
     return {
       works: [
         {
+          name: 'Aichemy - Testgold',
+          img: '/works/testgold.webp',
+          uri: 'https://dev.k8s.testgold.dev/',
+          github: '#',
+          keyword: [
+            '#Test_automation',
+            '#Auto_gen',
+            '#Auto_heal',
+            '#Enhance_coverage',
+          ],
+          tags: [
+            'Vue Js',
+            'Element Ui',
+            'Javascript',
+            'Django',
+            'Slack',
+            'Github',
+            'AWS',
+          ],
+          description: this.$t('entity.aichemy-full-desc'),
+          shortDescription: this.$t('entity.aichemy-short-desc'),
+        },
+        {
           name: 'Workerly',
           img: '/works/workerly.webp',
           uri: 'https://trial.app.workerly.io/',
