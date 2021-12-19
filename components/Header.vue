@@ -14,6 +14,7 @@
   >
     <div class="logo">
       <div class="logo--container p-1">
+        <!-- TODO Add light & dark mode switcher DOM -->
         <NuxtLink :to="localePath('/')">
           <img src="/logo.webp" alt="LOGO" width="40px" height="40px" />
         </NuxtLink>
@@ -239,6 +240,8 @@ a {
   .logo {
     display: flex;
     align-items: center;
+
+    //TODO add light & dark mode switcher CSS
 
     .logo--container {
       border: solid 1px $color;

@@ -73,6 +73,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+  //TODO load main css depending on current themeMode
   css: [
     '~/assets/css/animate.css',
     '~/assets/scss/main.scss',
