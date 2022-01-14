@@ -8,7 +8,7 @@
       </div>
     </section>
     <Social />
-    <div v-if="new Date().getMonth() === 11" class="guirlande--container">
+    <div v-show="new Date().getMonth() === 11" class="guirlande--container">
       <div class="guirlande guirlande1"></div>
       <div class="guirlande guirlande2"></div>
       <div class="guirlande guirlande3"></div>
