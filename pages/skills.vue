@@ -100,7 +100,7 @@ export default {
           to: 'Now',
         },
         {
-          enterprise: 'Workerly',
+          enterprise: 'Workbud',
           logo: '/enterprises_logo/workerly.webp',
           uri: 'https://www.workerly.io/',
           tags: [
