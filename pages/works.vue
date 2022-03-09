@@ -138,7 +138,7 @@
             ><font-awesome-icon :icon="['fab', 'telegram']"
           /></a>
           <a
-            href="https://wa.me/+237670331580"
+            href="https://wa.me/+237690534401"
             target="blank"
             class="bp-btn p-2 text-xs mx-3 no-display m-visible"
             ><font-awesome-icon :icon="['fab', 'whatsapp']"

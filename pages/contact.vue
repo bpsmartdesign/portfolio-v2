@@ -19,7 +19,7 @@
           {{ $t('contact.hello') }}
         </a>
       </button>
-      <a href="https://wa.me/+237670331580" class="bp-btn px-3 py-2"
+      <a href="https://wa.me/+237690534401" class="bp-btn px-3 py-2"
         ><font-awesome-icon :icon="['fab', 'whatsapp']"
       /></a>
     </div>

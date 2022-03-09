@@ -24,7 +24,7 @@ export default {
         { label: 'Twitter', icon: 'twitter', uri: 'https://twitter.com/bpsmartdesign' },
         { label: 'Codepen', icon: 'codepen', uri: 'https://codepen.io/bpsmartdesign' },
         { label: 'Dribbble', icon: 'dribbble', uri: 'https://dribbble.com/bpsmartdesign' },
-        { label: 'Whatsapp', icon: 'whatsapp', uri: 'https://wa.me/+237670331580' },
+        { label: 'Whatsapp', icon: 'whatsapp', uri: 'https://wa.me/+237690534401' },
       ]
     }
   }
