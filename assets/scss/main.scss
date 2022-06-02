@@ -195,9 +195,9 @@ body {
   color: $tColor2;
   font-family: 'JosefinSlab';
   overflow: hidden;
-  min-height: -webkit-fill-available;
+  min-height: -webkit-stretch;
   min-height: -moz-available;
-  min-height: fill-available;
+  min-height: stretch;
   min-height: stretch; /* Latest specification */
 }
 .page--container {
@@ -700,9 +700,9 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: -webkit-fill-available;
+    height: -webkit-stretch;
     height: -moz-available;
-    height: fill-available;
+    height: stretch;
     height: stretch; /* Latest specification */
     background-color: rgba($color: #000000, $alpha: 0.6);
     z-index: 99999 !important;
@@ -838,15 +838,15 @@ body {
 
   body,
   html {
-    min-height: -webkit-fill-available !important;
+    min-height: -webkit-stretch !important;
     height: -moz-available !important;
-    height: fill-available !important;
+    height: stretch !important;
     height: stretch !important; /* Latest specification */
   }
   .drawer-container {
-    height: -webkit-fill-available;
+    height: -webkit-stretch;
     height: -moz-available;
-    height: fill-available;
+    height: stretch;
     height: stretch; /* Latest specification */
   }
 }
