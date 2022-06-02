@@ -121,7 +121,7 @@
     <div v-if="showResume" id="cv" class="cv--container" @click.self="closeCv">
       <embed
         id="embed"
-        src="/cv_en.pdf"
+        src="/bpsmartdesign.cv.pdf"
         frameborder="0"
         height="96%"
         class="cv--content animate__animated animate__flipInY"
